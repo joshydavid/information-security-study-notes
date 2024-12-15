@@ -1,5 +1,5 @@
 class Solution:
-    def getEncryptedString(self, s: str, k: int) -> str:
+    def getEncryptedString(self, s, k):
         """
         - can the input be null?
         - is the input a valid string?

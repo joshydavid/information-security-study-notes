@@ -3,7 +3,6 @@ class Solution:
         """
         - https://leetcode.com/problems/defanging-an-ip-address/description/
         - can the input be empty?
-        - if its empty - what do I return?
         - is the input always a valid IPv4 address?
         """
 
