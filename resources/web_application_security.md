@@ -1,6 +1,6 @@
 # Information Security Interview Preparation (Web Application Security)
 
-## What is the OWASP (Open Web Application Security Project) Top 10 and why is it important?
+## What is OWASP (Open Web Application Security Project)?
 
 - The OWASP Top 10 is a list of the most critical web application security risks, including issues like SQL injection, broken authentication, cross-site scripting (XSS), and more. It helps organizations identify and mitigate common vulnerabilities in web applications.
 - OWASP (Open Web Application Security Project) 2024
@@ -55,10 +55,6 @@ CSRF attack will not be required if you can do XSS - stronger.
 - 3 types of XSS, reflected, stored and DOM-based XSS.
   - Reflected and stored XSS involves the server while DOM-based XSS involves only the client.
   - XSS can be prevented by validating and sanitising user inputs so that they are not treated as codes, using security headers like `Content-Security-Policy` or using httpOnly flag to prevent JavaScript from accessing the cookie.
-
-## Explain the concept of least privilege and why it’s important in information security
-
-The principle of least privilege means granting users and systems only the minimum level of access needed for them to complete their tasks, this minimises the risk of accidental or malicious damage to sensitive information.
 
 ## What is a Zero-Day vulnerability? Can you provide an example of how it can be exploited?
 

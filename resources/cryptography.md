@@ -1,36 +1,60 @@
 # Information Security Interview Preparation (Cryptography Fundamentals)
 
-## CIA Traid
+## CIA Triad
 
-- Confidentiality (nothing is exposed or leaked)
-- Integrity (nothing is modified by unauthorised party)
-- Availability (resources are available for those who have permission to view)
+The CIA triad is a model in Information Security that emphasies 3 core principles for protecting data and systems and we need to balance all 3.
+
+**Confidentality**
+
+- Ensures that sensitive information is accessed only by authorised individuals and information is not exposed to unauthorised personnel.
+- Techniques
+  - Encryption
+  - Access control
+  - Authentication mechanisms
+
+**Integrity**
+
+- Ensures that data remains accurate, consistent and unmodified during storage or transmission by unauthorised personnel.
+- Techniques
+  - Hashing
+  - Digital Signatures
+  - Version Control
+
+**Availability**
+
+- Ensures that information and systems are accessible to authorised personnels.
+- System must resist disruptions such as cyberattacks, natural disasters or hardware failrues.
+- Techniques
+  - DDoS protection
+  - Failover systems
+  - Backups
 
 Only the key should be kept secret, the algorithm should be publicly known. (Kerckhoff’s Principle 1883)
-
 Defence is hard, as long as we keep the key secret. Good-enough security is good-enough, certain trade-offs are needed.
 
 ## What's the difference between symmetric and asymmetric encryption?
 
 - Symmetric encryption uses the same key for both encryption and decryption. It requires a secure channel to exchange keys.
-  - example algorithm AES
+  - AES algorithm
   - Pros: Fast and efficient for large data.
-  - Cons: Key distribution can be challenging.
+  - Cons: Key distribution can be challenging, and the need to have a secure channel to do so.
 - Asymmetric encryption uses a pair of keys, public and private key.
   - Public key is used for encryption and a private key is used for decryption.
-  - Some examples include RSA where RSA's security is determined on the product of 2 large prime numbers (p and q) to form the modulus n.
+  - RSA algorithm - where RSA's security is determined on the product of 2 large prime numbers (p and q) to form the modulus n.
   - It's commonly agreed that if n is large enough, security will not be compromised. However, quantum computing has the power to crack this.
   - Pros: No need for secure key exchange.
   - Cons: Slower than symmetric encryption.
 
+Best of both world - envelope encryption.
+
 ## Cryptography Concepts Comparison
 
-| RSA Signature                                             | HMAC                                                                |
-| --------------------------------------------------------- | ------------------------------------------------------------------- |
-| Data Integrity (Asymmetric)                               | Data Integrity (Symmetric)                                          |
-| Sender cannot deny, non-repudiation                       | Sender can deny since both share the same key                       |
-| Everyone can verify (public key)                          | Only sender and receiver can verify because they share the same key |
-| Slow due to big number of computation and it’s asymmetric | Fast cause symmetric                                                |
+| RSA Signature                                            | HMAC                                                                |
+| -------------------------------------------------------- | ------------------------------------------------------------------- |
+| Data Integrity (Asymmetric)                              | Data Integrity (Symmetric)                                          |
+| Sender cannot deny, non-repudiation                      | Sender can deny since both share the same key                       |
+| Everyone can verify (public key)                         | Only sender and receiver can verify because they share the same key |
+| Slow due to big number of computation as it’s asymmetric | Fast cause symmetric                                                |
 
 <br>
 

@@ -6,7 +6,7 @@ Networks are simply things connected, it can found in all walks of life such as 
 
 ## What is the Internet?
 
-The internet is a giant network that consists of many small networks within itself, it allows devices and servers to communicate and share information through set of standardised protocols known as Internet Protocl (IP)
+The internet is a giant network that consists of many small networks within itself, it allows devices and servers to communicate and share information through set of standardised protocols known as Internet Protocol (IP)
 
 ![Internet](./images/networking/internet.png)
 
