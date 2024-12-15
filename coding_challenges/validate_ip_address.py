@@ -1,8 +1,10 @@
 class Solution:
     def validIPAddress(self, queryIP):
-        # https://leetcode.com/problems/validate-ip-address/submissions/1462884960/
-        # can the input be empty?
-        # is the input always a valid IPv4 or IPv6?
+        """
+        - https://leetcode.com/problems/validate-ip-address/submissions/1462884960/
+        - can the input be empty?
+        - is the input always a valid IPv4 or IPv6?
+        """
 
         VALID_IPv4 = "IPv4"
         VALID_IPv6 = "IPv6"

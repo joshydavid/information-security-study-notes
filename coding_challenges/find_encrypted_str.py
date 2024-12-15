@@ -1,9 +1,11 @@
 class Solution:
     def getEncryptedString(self, s: str, k: int) -> str:
-        # can the input be null?
-        # is the input a valid string?
-        # can k be 0?
-        # are the characters lower or uppercase?
+        """
+        - can the input be null?
+        - is the input a valid string?
+        - can k be 0?
+        - are the characters in lower or uppercase?
+        """
 
         cipher = []
         n = len(s)

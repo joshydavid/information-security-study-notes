@@ -1,13 +1,10 @@
 class TextToEmoji:
-    """
-    - Can the input be null?
-    - Are the input in lowercase or uppercase?
-    - Are there special characters in the inputs?
-    """
-
     def swapTextToEmoji(self, sentence):
-        # can the sentence be empty?
-        # is input in lowercase or uppercase?
+        """
+        - Can the input be null?
+        - Are the input in lowercase or uppercase?
+        - Are there special characters in the inputs?
+        """
 
         if not sentence:
             EMPTY_MESSAGE = "Sorry, no inputs found."
