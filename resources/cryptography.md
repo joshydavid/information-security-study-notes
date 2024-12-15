@@ -23,7 +23,7 @@ The CIA triad is a model in Information Security that emphasies 3 core principle
 **Availability**
 
 - Ensures that information and systems are accessible to authorised personnels.
-- System must resist disruptions such as cyberattacks, natural disasters or hardware failrues.
+- System must resist disruptions such as cyberattacks, natural disasters or hardware failures.
 - Techniques
   - DDoS protection
   - Failover systems
