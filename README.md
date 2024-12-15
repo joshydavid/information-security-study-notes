@@ -1,4 +1,6 @@
-# Information Security Interview Preparation (Overview)
+# Information Security Interview Preparation
+
+<img src="./resources/images/secure.png" alt="macbook_pro" width="300" />
 
 ## Useful Resources
 
