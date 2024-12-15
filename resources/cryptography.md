@@ -1,8 +1,18 @@
 # Information Security Interview Preparation (Cryptography Fundamentals)
 
+## CIA Traid
+
+- Confidentiality (nothing is exposed or leaked)
+- Integrity (nothing is modified by unauthorised party)
+- Availability (resources are available for those who have permission to view)
+
+Only the key should be kept secret, the algorithm should be publicly known. (Kerckhoff’s Principle 1883)
+
+Defence is hard, as long as we keep the key secret. Good-enough security is good-enough, certain trade-offs are needed.
+
 ## What's the difference between symmetric and asymmetric encryption?
 
-- Symmetric Encryption uses the same key for both encryption and decryption, requires a secure channel to exchange keys.
+- Symmetric encryption uses the same key for both encryption and decryption. It requires a secure channel to exchange keys.
   - example algorithm AES
   - Pros: Fast and efficient for large data.
   - Cons: Key distribution can be challenging.
@@ -12,6 +22,23 @@
   - It's commonly agreed that if n is large enough, security will not be compromised. However, quantum computing has the power to crack this.
   - Pros: No need for secure key exchange.
   - Cons: Slower than symmetric encryption.
+
+## Cryptography Concepts Comparison
+
+| RSA Signature                                             | HMAC                                                                |
+| --------------------------------------------------------- | ------------------------------------------------------------------- |
+| Data Integrity (Asymmetric)                               | Data Integrity (Symmetric)                                          |
+| Sender cannot deny, non-repudiation                       | Sender can deny since both share the same key                       |
+| Everyone can verify (public key)                          | Only sender and receiver can verify because they share the same key |
+| Slow due to big number of computation and it’s asymmetric | Fast cause symmetric                                                |
+
+<br>
+
+|                        | RSA Signature                                                      | RSA Encryption                                                     |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Sender (Private key)   | Yes, sender needs private to sign the message                      | No, sender just needs receiver’s public key to encrypt the message |
+| Receiver (Private key) | No, receiver just need sender’s public key to verify the signature | Yes, receiver requires its private key to decrypt                  |
+| Limitation             | None, can sign on any size (signs on the digest, the hash)         | Only encrypt data smaller than modulus n                           |
 
 ## Why is using SSL/TLS important?
 
