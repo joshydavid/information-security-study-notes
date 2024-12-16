@@ -2,6 +2,28 @@
 
 ## Scenarios
 
+### How would you handle a DDoS attack?
+
+A DDoS (Distributed Denial of Service) attack occurs when an attacker uses multiple compromised systems to flood a target system with traffic, overwhelming its capacity to handle requests, and making the service unavailable.
+
+1. Detection
+   - Use traffic analysis tools (networking monitoring) to identify unusual spikes in traffic.
+   - Look for characteristics of DDos attack, such as sudden surge in traffic from a single/multi IP address
+2. Containment
+   - Rate Limiting: Reduces the impact by limiting the number of request a user can make within X duration.
+   - Geo-blocking: Block traffic from specific geographic regions that are not relevant to the service
+   - Blackholing: Redirect malicious traffic to a "bllack hole", blocking it from reaching the target server.
+3. Mitigation
+   - Use Content Delivery Network (CDN) like Cloudflare, it helps to absorb the traffic and prevent it from hitting the actual server.
+   - Engage DDoS mitigation service from ISP
+   - Network filtering, use Web Application Firewalls (WAFs) or Intrusion Prevention System (IPS) to filter malicious traffic
+4. Recovery
+   - Restore service fully and monitor the situation
+   - Apply configuration changes to strengthen defenses
+5. Post-Incident Review
+   - Perform post-morterm analysis to understand how the attack happened and how it was conducted.
+   - Update incident response procedure.
+
 ### If a company’s server was compromised and sensitive data was leaked, what steps would you take to mitigate the damage and prevent future breaches?
 
 1. Contain the breach: Immediately disconnect the compromised server from the network.

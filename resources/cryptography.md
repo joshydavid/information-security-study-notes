@@ -247,3 +247,24 @@ MFA requires multiple forms of authentication, such as:
   - Use salt to make hashed passwords unique.
   - Do not store or transmit passwords in plaintext.
   - Use multi-factor authentication as an additional layer of protection.
+
+## Public Key Infrastructure (PKI)
+
+- Framework for managing digital keys and certificate used for securing communications.
+- Asymmetric cryptography, consits of a public and private key
+
+### Public Key
+
+- Shared openly and can be used by anyone
+  - to encrypt messages
+  - to verify digital signatures created by the corresponding private key
+- Can be distributed widely without compromising security, it's public
+
+### Private Key
+
+- Kept secret and is used
+  - to decrypt message encrypted with the corresponding public key
+  - to create digital signature, proving authenticity and integrity => non-repudiation as well
+- Must be safeguarded because anyone with the private key can used it to read encrypted message or sign malicious data
+
+In PKI, digital certs issued by CA contain the public key and information about the owner. Anyone who wants to send an encrypted message to this owner can use the owner's public key and only he can decrypt using his private key.

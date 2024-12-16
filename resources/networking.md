@@ -261,6 +261,12 @@ Receiver: Layer 1 -> Layer 7
   - Use fiber optics for secure communication, as they are harder to tap.
   - Wireless networks should use strong WPA2 or WPA3 encryption.
 
+### Firewall
+
+- Network security that monitors and control incoming/outgoing traffic based on pre-defined security rule.
+- Purpose
+  - Block unauthorised access and ensure that only legit traffic can go through
+
 ### What is a DNS?
 
 DNS stands for Domain Name System, it is a system that translate human-readable domain name such as Apple.com into machine-readable IP address such as 192.168.1.1

@@ -60,6 +60,10 @@ CSRF attack will not be required if you can do XSS - stronger.
 
 A Zero-Day vulnerability is a previously unknown security flaw that attackers can exploit before the vendor becomes aware of releases fix for it. Example: The EternalBlue exploit, which targeted a Windows SMB vulnerability, was leveraged in ransomware attacks like WannaCry.
 
+## Zero Trust Security
+
+Assumes no one, whether inside or outside the organisation should be trusted by default. Never trust, and always verify. Cyber attacks can happen from both internal/external, every request to the system should be verified.
+
 ## CSRF Attacks
 
 - Forged requests on behalf of a logged-in user
@@ -77,3 +81,5 @@ A Zero-Day vulnerability is a previously unknown security flaw that attackers ca
 
 Same Site Origin Policy
 CORS
+
+## Secure Coding Practices
