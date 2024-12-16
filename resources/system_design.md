@@ -1,8 +1,6 @@
 # Information Security Interview Preparation (System Design)
 
-## System Design
-
-### How would you secure an API service that handles sensitive user data?
+## How would you secure an API service that handles sensitive user data?
 
 1. Use HTTPS for secure communication.
 2. Implement OAuth 2.0 or JWT for secure and scalable authentication.
@@ -10,7 +8,7 @@
 4. Use strong encryption (AES-256) for sensitive data storage.
 5. Implement rate-limiting and IP whitelisting to prevent brute force and DDoS attacks.
 
-### How would you design a secure online banking system from the ground up?
+## How would you design a secure online banking system from the ground up?
 
 1. Authentication: Implement multi-factor authentication (MFA) for user logins.
 2. Encryption: Use SSL/TLS for all communications and AES for sensitive data storage.

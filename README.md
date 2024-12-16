@@ -2,7 +2,7 @@
 
 <img src="./resources/images/secure.png" alt="macbook_pro" width="300" />
 
-## Useful Resources
+## 📚 Useful Resources
 
 - [Google Security Engineer Study Notes](https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#learning-tips)
 - [Roadmap](https://roadmap.sh/cyber-security)

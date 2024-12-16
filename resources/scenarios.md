@@ -1,8 +1,6 @@
 # Information Security Interview Preparation (Scenarios)
 
-## Scenarios
-
-### How would you handle a DDoS attack?
+## How would you handle a DDoS attack?
 
 A DDoS (Distributed Denial of Service) attack occurs when an attacker uses multiple compromised systems to flood a target system with traffic, overwhelming its capacity to handle requests, and making the service unavailable.
 
@@ -24,7 +22,7 @@ A DDoS (Distributed Denial of Service) attack occurs when an attacker uses multi
    - Perform post-morterm analysis to understand how the attack happened and how it was conducted.
    - Update incident response procedure.
 
-### If a company’s server was compromised and sensitive data was leaked, what steps would you take to mitigate the damage and prevent future breaches?
+## If a company’s server was compromised and sensitive data was leaked, what steps would you take to mitigate the damage and prevent future breaches?
 
 1. Contain the breach: Immediately disconnect the compromised server from the network.
 2. Identify the scope: Assess what data was leaked and identify the vulnerability.
@@ -33,14 +31,14 @@ A DDoS (Distributed Denial of Service) attack occurs when an attacker uses multi
 5. Monitor for further issues: Increase monitoring to detect any new attacks or exploits.
 6. Review and update security policies: Perform a thorough post-incident review to strengthen security measures.
 
-### You discover that an employee has been using weak passwords across multiple accounts, and one of their accounts has been compromised. What actions would you take?
+## You discover that an employee has been using weak passwords across multiple accounts, and one of their accounts has been compromised. What actions would you take?
 
 1. Reset passwords immediately on all affected accounts.
 2. Enforce stronger password policies, such as a minimum length, complexity, and multi-factor authentication.
 3. Conduct a security training session for the employee to emphasize password best practices.
 4. Perform a security audit to check if any other accounts were compromised.
 
-### Imagine you are developing a new feature that stores sensitive user data. What security measures would you implement to protect this data?
+## Imagine you are developing a new feature that stores sensitive user data. What security measures would you implement to protect this data?
 
 - Use Secure Development Practices
 

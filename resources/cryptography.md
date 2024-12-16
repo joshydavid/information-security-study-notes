@@ -251,7 +251,7 @@ MFA requires multiple forms of authentication, such as:
 ## Public Key Infrastructure (PKI)
 
 - Framework for managing digital keys and certificate used for securing communications.
-- Asymmetric cryptography, consits of a public and private key
+- Asymmetric cryptography, consists of a public and private key
 
 ### Public Key
 
