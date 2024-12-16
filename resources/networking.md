@@ -63,7 +63,7 @@ IPv6
 
 [TCP](https://www.cloudflare.com/learning/ddos/glossary/tcp-ip/)
 
-### Three-way Handshake
+### Three-way Handshake (Establish Connection - Layer 4)
 
 ![3 Way Handshake](./images/networking/tcp_handshake.png)
 
@@ -285,11 +285,18 @@ When you type a URL into your browser, the DNS first checks if the IP address is
 ### What happens when you visit Apple.com in the browser?
 
 - Enter Apple.com into the browser
-- Browser checks its cache and OS's cache for the IP address of Apple.com
-- If the IP address is not found, the device queries a DNS resolver to find the IP address for Apple.com
-- Once the IP address is found, the browser sends a request to the server hosting Apple.com using TCP/IP protocol
-- Secure sites like Apple.com uses the HTTPS protocol, so the browser will initiate and SSL/TLS handshake to encrypt the connection to ensure confidentality
-- The server then processes the request and responds with the page's HTML, CSS, JavaScript and other static assets.
+- Translate the URL (Apple.com) into an IP address
+- The mapping is stored in a cache, and the browser look for the IP address in multiple layers of cache (browser, OS, local, ISP)
+- If the IP address is not found, the browser will request the DNS resolver to resolve it
+- The DNS resolver performs a recursive DNS look up until it is found
+- Once the IP address is found, the browser sends a HTTP request to the server hosting Apple.com using TCP/IP protocol
+- We should always use HTTPS for secure access.
+- The browser initiates a TCP connection with the server via TCP 3-way handshake. (Establish the Communication)
+- After the TCP connection is established, SSL/TLS takes over to secure the communication. This process ensures that data transmitted between the browser and server is encrypted and secure.
+- The server sends its public key to the client, the client uses the public key to encrypt the session key and sends to the server.
+- The server uses its private key to decrypt the session key.
+- The secure channel is established, and now it can exchange encrypted data using the session key.
+- The server processes the request and responds with the page's HTML, CSS, JavaScript and other static assets.
 - The browser then processes the files and renders the page to the frontend.
 
 ### What happens when you do a search on Google?

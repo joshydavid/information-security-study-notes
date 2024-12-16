@@ -83,3 +83,36 @@ Same Site Origin Policy
 CORS
 
 ## Secure Coding Practices
+
+Write software in a way that protects against security vulnerabilities and ensures CIA is fulfilled.
+
+1. Input validation
+   - Valid all inputs on server side
+   - Only allow digits for phone number, not text
+   - Use regular expressions to validate inputs
+   - Treat all user inputs as untrusted and sanitise them
+2. Output encoding
+   - Data displayed to user is not executed as code, to prevent XSS
+     - Convert special characters `> < & "` to HTML entities (`&lt, &gt`)
+     - URL encoding
+     - JavaScript and CSS encoding
+3. Use parameterised queries for database access to prevent SQL injections
+   - No concatenation to form SQL queries
+   - Parameterised queries ensure that user input is treated as data, and not executable code
+4. Authentication (Prove who you are) and Authorisation (Access control)
+   - Hash password using strong algorithms like bcrypt
+   - Add salt to prevent 2 same passwords from having the same digest, and to prevent rainbow table attacks
+   - Implement MFA to add extra layer of security
+   - Implement RBAC to ensure users only have access to the resources they need
+   - Ensure that authentication tokens (sessionID, JWTs) are securely stored and transmitted only via HTTPS to prevent eavesdropping
+5. Secure Communication
+   - To prevent man-in-the-middle attacks, and avoid exposing sensitive data -> always use HTTPS (SSL/TLS) to encrypt data that is transmitted over the network
+   - Use latest secure version of TLS
+6. Use Strong Cryptography
+   - Weak cryptography can allow attackers to easily decrypt sensitive information/tamper with it
+   - Use modern cryptographic algorithms (AES-256, RSA-2048)
+   - Use salt for hashing passwords and keys
+   - Never hard-code sensitive keys or crytographic secrets in the source code
+   - For symmetric encryption use secure key management system to protect the keys
+7. Security Headers
+   - Set Content-Security-Policy (CSP) headers to control which resources can be loaded on the site

@@ -7,6 +7,12 @@ class Solution:
         - are the characters in lower or uppercase?
         """
 
+        if k == 0:
+            return s
+
+        if not s:
+            return s
+
         cipher = []
         n = len(s)
 
