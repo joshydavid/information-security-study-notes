@@ -1,12 +1,49 @@
 # Information Security Interview Preparation (Cryptography Fundamentals)
 
+## Explain the term Cryptography
+
+Cryptography is the practice of using methods to secure sensitive data by transforming readable information, known as plaintext into an unreadable format called ciphertext - through a process called encryption. Only those with the decryption key can convert the ciphertext back into plaintext.
+
+The goal is to protect the confidentiality, integrity and availability of data, ensuring that it remains secure from unauthorized access or tampering whether during storage or transmission.
+
+## Types of Cryptography
+
+**Symmetric Key Cryptography**
+
+- Uses the same key for both encryption and decryption
+- E.g AES, DES
+- Use case
+  - Data-at-rest encryption
+
+**Asymmetric Key Cryptography**
+
+- Uses a pair of keys (public, private)
+- E.g RSA
+- Use case
+  - Secure key exchange
+  - Digital signature
+
+**Hybrid Encryption (Envelope Encryption)**
+
+- Combines symmetric and asymmetric cryptography for efficiency and security
+- Use case
+  - HTTPS (TLS protocol)
+
+**Hashing**
+
+- Converts data into a fixed-size hash known as digest, irreversible, one-way.
+- E.g SHA-256
+- Use case
+  - Password storage
+  - Integrity checks
+
 ## CIA Triad
 
-The CIA triad is a model in Information Security that emphasies 3 core principles for protecting data and systems and we need to balance all 3.
+The CIA triad is a model in Information Security that emphasises 3 core principles for protecting data and systems and we need to balance all 3.
 
 **Confidentality**
 
-- Ensures that sensitive information is accessed only by authorised individuals and information is not exposed to unauthorised personnel.
+- Ensures that sensitive information is accessed only by authorised individuals and not exposed to unauthorised personnel.
 - Techniques
   - Encryption
   - Access control
@@ -22,15 +59,27 @@ The CIA triad is a model in Information Security that emphasies 3 core principle
 
 **Availability**
 
-- Ensures that information and systems are accessible to authorised personnels.
-- System must resist disruptions such as cyberattacks, natural disasters or hardware failures.
+- Ensures that information and systems are accessible to authorised personnel.
+- System must resist disruptions such as cyber attacks, natural disasters or hardware failures.
 - Techniques
   - DDoS protection
   - Failover systems
   - Backups
 
 Only the key should be kept secret, the algorithm should be publicly known. (Kerckhoff’s Principle 1883)
-Defence is hard, as long as we keep the key secret. Good-enough security is good-enough, certain trade-offs are needed.
+Defense is hard, as long as we keep the key secret. Good-enough security is good-enough, certain trade-offs are needed.
+
+## Cryptography Algorithms
+
+- AES
+  - Symmetric encryption used for secure data storage and transmission
+- RSA
+  - Asymmetric encryption for secure key exchange
+  - Digital signature
+- SHA-256
+  - Cryptographic hash function used in certificates and digital signatures
+- HMAC
+  - Combines hashing with a secret key for message integrity and authenticity
 
 ## What's the difference between symmetric and asymmetric encryption?
 
@@ -58,11 +107,11 @@ Best of both world - envelope encryption.
 
 <br>
 
-|                        | RSA Signature                                                      | RSA Encryption                                                     |
-| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
-| Sender (Private key)   | Yes, sender needs private to sign the message                      | No, sender just needs receiver’s public key to encrypt the message |
-| Receiver (Private key) | No, receiver just need sender’s public key to verify the signature | Yes, receiver requires its private key to decrypt                  |
-| Limitation             | None, can sign on any size (signs on the digest, the hash)         | Only encrypt data smaller than modulus n                           |
+|                        | RSA Signature                                                       | RSA Encryption                                                     |
+| ---------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Sender (Private key)   | Yes, sender needs private to sign the message                       | No, sender just needs receiver’s public key to encrypt the message |
+| Receiver (Private key) | No, receiver just needs sender’s public key to verify the signature | Yes, receiver requires its private key to decrypt                  |
+| Limitation             | None, can sign on any size (signs on the digest, the hash)          | Only encrypt data smaller than modulus n                           |
 
 ## Why is using SSL/TLS important?
 
@@ -74,25 +123,34 @@ Best of both world - envelope encryption.
 
 ## SSL/TLS Handshake Process
 
-- ClientHello: Client sends SSL/TLS version, cipher and client random.
-- ServerHello: Server responds with the chosen cipher, server random and sends its public key to the client.
-- KeyExchange:
-  - RSA: Client generates a pre-master secret, encrypts it with the server's public key and sends it to the server.
+RSA key exchange process
+
+- Client Hello: Client sends a message to the server containing
+  - SSL/TLS version it supports
+  - list of cipher suites
+  - a random value called client random
+- Server Hello: The Server responds with
+  - the chosen cipher
+  - a random value called server random server random
+  - its public key (from its certificate) which includes the server's identity
+- Key Exchange:
+  - The client
+  - generates a pre-master secret
+  - encrypts it with the server's public key and
+  - sends it to the server.
 - Session Key Generation:
-  - Both the client and server generate the symmetric session keys using the pre-master secret and random values
-- Both client and server exchanged finish messages to verify the handshake and start secure communication.
-- Data is transmitted securely using symmetric encryption.
+  - Server: Decrypt the pre-master secret using its private key, combine it with client random and server random to derive the symmetric key
+  - Client: Combine the pre-master secret with client random and server random to derive the symmetric key
+- Handshake Completion:
+  - Both the client and server sends a finished message, which includes an encrypted hash of all previous handshake messages.
+- Secure Communication:
+  - Data is transmitted securely using symmetric encryption.
 
 ## Explain the concept of hashing and how it is different from encryption and encoding
 
 - Hashing is a one-way operation that takes an input and converts it into a fixed-size string of characters, which is typically a hash value known as digest. This is irreversible since it's one way.
 - Encryption is a two-way operation, the data is scrambled and transformed into unreadable format but it can later be decrypted and reverted to the original form using the correct key.
-- Encoding is the process to transform the data in such a format that can be used by different systems. No keys require to decode, its more for data usability instead of confidentality.
-
-## What are the common hashing algorithms and how do they work?
-
-- Common hashing algorithms include MD5, SHA-1, and SHA-256.
-- Hashing creates a fixed-size output (hash) from input data of any size. It is used for data integrity checks and password storage.
+- Encoding is the process to transform the data in such a format that can be used by different systems. No keys require to decode, its more for data usability instead of confidential.
 
 ## Explain the concept of least privilege and why it’s important in information security
 

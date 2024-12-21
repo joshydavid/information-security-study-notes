@@ -114,14 +114,14 @@ TLDR, speed > reliability - UDP, otherwise TCP.
 - Layer 6 makes the data presentation for application to consume
 - Responsible for translation, encryption, compression of data
 - For encryption, layer 6 will encrypt on sender end and decrypt on receiver end so that it can present the application layer with unencrypted, readable data
-- Compresses data it receives from layer 7 before delivering it to layer 5 to improve speed and efficency
+- Compresses data it receives from layer 7 before delivering it to layer 5 to improve speed and efficiency
 
 ### Layer 5 - The Session Layer
 
 ![Layer 5](./images/networking/layer_5.png)
 
 - Responsible for opening/closing communication between 2 devices known as session
-- Stay open long enough to transfer all the data, but promptly closes to avoid wasting ersources
+- Stay open long enough to transfer all the data, but promptly closes to avoid wasting resources
 
 ### Layer 4 - The Transport Layer
 
@@ -152,7 +152,7 @@ TLDR, speed > reliability - UDP, otherwise TCP.
 ![Layer 2](./images/networking/layer_2.png)
 
 - Similar to network layer except this facilitates data transfer between 2 devices on the same network.
-- Takes packets from the network layer and beraks them into smaller pieces called frames.
+- Takes packets from the network layer and breaks them into smaller pieces called frames.
 - Responsible for flow control and error control for intra-network communication.
 
 ### Layer 1 - The Physical Layer
@@ -160,8 +160,8 @@ TLDR, speed > reliability - UDP, otherwise TCP.
 ![Layer 1](./images/networking/layer_1.png)
 
 - Involves physical equipment involved in data transfer such as cables and switches
-- Data gets convereted into bit stream, (0s and 1s)
-- The physical layer of both devices must also agree on a signal convention so that 1s can be distinguised from the 0s on both devices.
+- Data gets converted into bit stream, (0s and 1s)
+- The physical layer of both devices must also agree on a signal convention so that 1s can be distinguished from the 0s on both devices.
 
 ### How data flows through the OSI Model
 
@@ -304,6 +304,6 @@ When you type a URL into your browser, the DNS first checks if the IP address is
 - Enter Apple internship as part of the search query
 - The browser resolves the IP address for Google's search service via DNS and establish a connection via HTTPS
 - The search query, alongside metadata is sent to Google's server
-- Google's algorithm will parse the query and identify keywords, retrieves relevant indexed webpages from its database and rank them based on factors like relevance, page quality, user location, and past behaviour.
+- Google's algorithm will parse the query and identify keywords, retrieves relevant indexed webpages from its database and rank them based on factors like relevance, page quality, user location, and past behavior.
 - Google then sends the ranked list of search results to the browser
 - The browser then renders the result, and we can click on the links to further explore

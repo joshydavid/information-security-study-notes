@@ -14,3 +14,4 @@
 - [SSL](https://www.cloudflare.com/learning/ssl/what-is-ssl/)
 - [Network](https://www.cloudflare.com/learning/network-layer/what-is-the-network-layer/)
 - [OSI Model](https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/)
+- [YouTube](https://www.youtube.com/watch?v=RM3TZJOmHAM&list=WL&index=21)

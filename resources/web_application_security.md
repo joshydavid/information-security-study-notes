@@ -112,7 +112,7 @@ Write software in a way that protects against security vulnerabilities and ensur
    - Weak cryptography can allow attackers to easily decrypt sensitive information/tamper with it
    - Use modern cryptographic algorithms (AES-256, RSA-2048)
    - Use salt for hashing passwords and keys
-   - Never hard-code sensitive keys or crytographic secrets in the source code
+   - Never hard-code sensitive keys or cryptographic secrets in the source code
    - For symmetric encryption use secure key management system to protect the keys
 7. Security Headers
    - Set Content-Security-Policy (CSP) headers to control which resources can be loaded on the site
