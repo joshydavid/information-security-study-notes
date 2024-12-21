@@ -1,13 +1,16 @@
-# Information Security Interview Preparation (Detection)
+# Information Security Interview Preparation (Intrusion Detection and Prevention System)
 
 ## Intrusion Detection System (IDS)
 
 - System designed to monitor and analyse network traffic for signs of security breaches, malicious activities, or policy violations.
 - Does not block traffic (this is firewall)
+- Passive
+- Deployed parallel to network traffic, analyses a copy of the traffic and does not directly interact with it
+- e.g SIEM system
 
-## Types of IDS
+## Types of Intrusion Detection System (IDS)
 
-### Network-based IDS
+### Network-based IDS (NIDS)
 
 - Monitors traffic on a network
 - Deployed at critical points (routers, firewalls)
@@ -16,7 +19,7 @@
   - DoS attacks
   - Protocol misuse
 
-### Host-based IDS
+### Host-based IDS (HIDS)
 
 - Monitors activity on a specific host/device
 - Tracks system logs, file changes and process activity
@@ -30,6 +33,28 @@
 - Combines the strengths of both network-based and host-based IDS
 - Example
   - Security Information and Event Management (SIEM) like Splunk
+
+## Intrusion Prevention System (IPS)
+
+- Active system that monitor, analyses and blocks malicious traffics in real-time.
+- Basically IDS + ability to block malicious traffics
+- Active
+- Additional layer behind firewall, deployed directly in the path of network traffic
+- E.g Inline firewalls with IPS functionality
+
+## Types of Intrusion Prevention System (IPS)
+
+### Network-based IPS (NIPS)
+
+- Monitors traffic on a network
+- Positioned behind firewalls
+- Use Case
+  - Detects and blocks exploits such as DDoS, worms, or unauthorised attempts
+
+### Host-based IPS (HIPS)
+
+- Installed directly on individual host (server) to monitor and protect them
+- Monitor application behaviour and protect against any malware by blocking them
 
 ## Detection Methods
 
@@ -78,5 +103,12 @@
 ## Challenges with IDS
 
 - Volume of alerts: this can overwhelm security teams.
+- Encrypted traffic: IDS tools struggle to inspect HTTPS traffic.
+- Zero-Day threats: Signature-based IDS cannot detect new vulnerabilities since it learns from a pre-defined pattern.
+
+## Challenges with IPS
+
+- Volume of alerts: this can overwhelm security teams.
+- Performance Impact: IPS are placed in-line with network traffic to perform deep packet inspection, this can lead to latency and performance degradation.
 - Encrypted traffic: IDS tools struggle to inspect HTTPS traffic.
 - Zero-Day threats: Signature-based IDS cannot detect new vulnerabilities since it learns from a pre-defined pattern.
