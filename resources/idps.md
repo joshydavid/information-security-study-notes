@@ -132,39 +132,41 @@ For critical applications where response time is crucial, recommend an IPS; othe
 
 **An organization reports that their IDS flagged a sudden spike in traffic from a known IP address, but no malicious signatures were found. What detection method should they use to address such issues in the future?**
 
-• The spike in traffic suggests a potential anomaly, not a known signature. Recommend anomaly-based detection for monitoring deviations from normal traffic patterns.
-• Highlight that anomaly-based detection is better for identifying zero-day threats and DDoS attacks.
-• However, mention that this approach may lead to false positives, so combining it with signature-based detection (hybrid detection) might provide a balanced solution.
+- The organization should consider implementing anomaly-based detection in their intrusion detection system (IDS) to address such issues in the future.
+- Unlike signature-based detection, anomaly-based detection identifies deviations from established normal behavior patterns, such as unusual spikes in traffic volume.
+- Zero-Day Threats - It can detect unknown or emerging threats that do not yet have defined signatures.
+- It helps flag unusual traffic patterns, even if they don’t match known malicious signatures, which is crucial in identifying potentially stealthy or evolving attacks.
+- However, this approach may lead to false positives, so combining it with signature-based detection (hybrid detection) might provide a balanced solution.
 
 ## Scenario 3 - False Positives in IPS
 
 **Your IPS is blocking legitimate web traffic from an internal server, causing disruption to business operations. What steps would you take to resolve this issue?**
 
 1. Investigate the Logs:
-   • Check IPS logs to identify the specific rule or pattern that caused the block.
+   - Check IPS logs to identify the specific rule or pattern that caused the block.
 2. Analyze Traffic:
-   • Determine if the traffic matches a malicious signature or if it was misclassified (false positive).
+   - Determine if the traffic matches a malicious signature or if it was misclassified (false positive).
 3. Update Rules/Policies:
-   • Modify or fine-tune IPS rules to exclude the legitimate traffic from being blocked (e.g., adding a whitelist).
+   - Modify or fine-tune IPS rules to exclude the legitimate traffic from being blocked (e.g., adding a whitelist).
 4. Test Changes:
-   • Ensure that the adjustment doesn’t introduce new vulnerabilities or allow malicious traffic.
+   - Ensure that the adjustment doesn’t introduce new vulnerabilities or allow malicious traffic.
 5. Monitor Closely:
-   • Monitor the IPS to confirm that legitimate traffic is no longer blocked and that other malicious traffic is still prevented.
+   - Monitor the IPS to confirm that legitimate traffic is no longer blocked and that other malicious traffic is still prevented.
 
 ## Scenario 4 - Encrypted Traffic
 
 **Your organization has implemented HTTPS across all its applications, but your IDS is failing to detect attacks within encrypted traffic. How would you address this issue?**
 
 1. SSL/TLS Decryption:
-   • Enable decryption capabilities on your IDS (or deploy a dedicated decryption proxy) to inspect HTTPS traffic.
+   - Enable decryption capabilities on your IDS (or deploy a dedicated decryption proxy) to inspect HTTPS traffic.
 2. Deploy an SSL/TLS Capable IDS/IPS:
-   • Use an IDS/IPS system that supports encrypted traffic inspection.
+   - Use an IDS/IPS system that supports encrypted traffic inspection.
 3. Log Monitoring:
-   • Analyze application and server logs for additional threat detection (to complement IDS).
+   - Analyze application and server logs for additional threat detection (to complement IDS).
 4. Privacy Considerations:
-   • Ensure compliance with privacy laws (e.g., GDPR, HIPAA) when decrypting traffic.
+   - Ensure compliance with privacy laws (e.g., GDPR, HIPAA) when decrypting traffic.
 5. Alternative Approaches:
-   • Suggest using endpoint-based detection to monitor encrypted threats directly on the host.
+   - Suggest using endpoint-based detection to monitor encrypted threats directly on the host.
 
 ## Scenario 5 - Handling Zero-Day Attacks
 
