@@ -2,7 +2,7 @@
 
 ## What is Networking?
 
-Networks are simply things connected, it can found in all walks of life such as meeting new people. In computing, networking is the same idea, network is formed by anywhere from 2 devices to billions.
+Networks are simply things connected, it can be found in all walks of life such as meeting new people. In computing, networking is the same idea, network is formed by anywhere from 2 devices to billions.
 
 ## What is the Internet?
 
@@ -12,12 +12,12 @@ The internet is a giant network that consists of many small networks within itse
 
 ## Identifying Devices on a Network
 
-Humans
+**Humans**
 
 - Name (mutable, name changed)
 - Fingerprint (immutable)
 
-Device
+**Device**
 
 - IP Address (mutable)
 - MAC Address (Media Access Control, immutable)
@@ -30,7 +30,7 @@ Device
 - Public address -> identify devices on the internet
 - Private address -> identify devices amongst other devices
 
-IPv4
+**IPv4**
 
 - 2^32 IP address (~4.29 billions)
 - Router address (Wifi A - same)
@@ -38,7 +38,7 @@ IPv4
   - MacBook Pro private IP address (different)
 - Running out of IP address as more devices are connected to the internet
 
-IPv6
+**IPv6**
 
 - Newer iteration, up to 2^128 IP address (~340 trillion)
 - Solves the limitation of IPv4
