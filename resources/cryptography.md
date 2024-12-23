@@ -326,3 +326,53 @@ MFA requires multiple forms of authentication, such as:
 - Must be safeguarded because anyone with the private key can used it to read encrypted message or sign malicious data
 
 In PKI, digital certs issued by CA contain the public key and information about the owner. Anyone who wants to send an encrypted message to this owner can use the owner's public key and only he can decrypt using his private key.
+
+## Scenario 1 - Symmetric Encryption in Secure File Storage
+
+**A company stores sensitive files on a server. How would you recommend securing these files using symmetric encryption? What challenges might arise?**
+
+- Use AES encryption to encrypt the files with a strong symmetric key.
+- Store the key in a secure hardware module such as HSM
+- Challenges
+  - Key management, ensuring secure distribution and rotation of encrypted keys
+  - Access control, limiting who has and can access they keys and encrypted files.
+
+## Scenario 2 - Secure Communication via TLS
+
+**During a TLS handshake, an attacker performs a man-in-the-middle (MITM) attack by presenting a fake certificate. How can the client detect this?**
+
+- The client can detect a fake certificate by validating it against trusted Certificate Authorities (CAs) in the certificate store.
+- TLS uses the chain of trust to ensure that the server's certificate is signed by a CA that the client trusts.
+
+## Scenario 3 - Password Hashing Vulnerability
+
+**A developer stores user passwords in a database using MD5. Why is this insecure, and what would you recommend instead?**
+
+- MD5 is insecure due to its vulnerability to collision attacks and fast computation, making it susceptible to brute force.
+- Use secure hashing algorithms such as bcrypt, Argon2 with a unique salt for each password such that even if 2 passwords are the same, the hashed password also known as digest will be different.
+
+## Scenario 4 - Secure API Authorization
+
+**How would you implement secure authorization for a REST API handling sensitive user data?**
+
+- Use OAuth2.0 for secure access delegation (Sign in with Apple)
+- Issue access tokens with scopes to limit access.
+- Use HTTPS to encrypt API communication from client to server.
+- Rotate and expire tokens regularly to mitigate issues.
+
+## Scenario 5 - Incident with Compromised Certificate
+
+**A website’s TLS certificate is compromised. What steps should be taken to secure the communication?**
+
+- Revoke the compromised certificate using the CA's certificate revocation mechanism.
+- Issue a new certificate.
+- Investigate the root cause of the compromise.
+
+## Scenario 6 - Hybrid Encryption System Design
+
+**Design a secure file transfer system using both symmetric and asymmetric encryption.**
+
+- Generate a random symmetric key for file encryption using AES
+- Encrypt the symmetric key with the recipient's public key using RSA
+- Transmit the encrypted file and the encrypted key
+- The recipient uses their private key to decrypt the symmetric key, and then use the symmetric key to decrypt the encrypted file.
