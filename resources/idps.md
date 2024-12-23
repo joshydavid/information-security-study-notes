@@ -2,9 +2,9 @@
 
 ## Intrusion Detection System (IDS)
 
-- System designed to monitor and analyse network traffic for signs of security breaches, malicious activities, or policy violations.
-- Does not block traffic (this is firewall)
 - Passive
+- System designed to monitor and analyze network traffic for signs of security breaches, malicious activities, or policy violations.
+- Does not block traffic (this is firewall)
 - Deployed parallel to network traffic, analyses a copy of the traffic and does not directly interact with it
 - e.g SIEM system
 
@@ -25,7 +25,7 @@
 - Tracks system logs, file changes and process activity
 - Use Case
   - Detect file integrity issues
-  - Unauthorised changes
+  - Unauthorized changes
   - Privilege escalations
 
 ### Hybrid IDS
@@ -36,9 +36,9 @@
 
 ## Intrusion Prevention System (IPS)
 
-- Active system that monitor, analyses and blocks malicious traffics in real-time.
-- Basically IDS + ability to block malicious traffics
 - Active
+- System that monitors, analyses and blocks malicious traffics in real-time.
+- Basically IDS + ability to block malicious traffics
 - Additional layer behind firewall, deployed directly in the path of network traffic
 - E.g Inline firewalls with IPS functionality
 
@@ -48,13 +48,13 @@
 
 - Monitors traffic on a network
 - Positioned behind firewalls
-- Use Case
-  - Detects and blocks exploits such as DDoS, worms, or unauthorised attempts
+- Use case
+  - Detects and blocks exploits such as DDoS, worms, or unauthorized attempts
 
 ### Host-based IPS (HIPS)
 
 - Installed directly on individual host (server) to monitor and protect them
-- Monitor application behaviour and protect against any malware by blocking them
+- Monitor application behavior and protect against any malware by blocking them
 
 ## Detection Methods
 
@@ -65,7 +65,7 @@
 
 ### Anomaly-based Detection
 
-- Monitor whether traffics deviate from the normal behaviour
+- Monitor whether traffics deviate from the normal behavior
 - Effective for unknown threats, but prone to false positives
 
 ### Hybrid Detection
@@ -79,12 +79,12 @@
    - Network-based IDS analyses packets at the network level.
    - Host-based IDS examines system logs, file systems and process activity.
 2. Detection Engine
-   - Applies detection rules (signature - pre-defined) or models (anonmaly detection) to identify threats.
+   - Applies detection rules (signature - pre-defined) or models (anomaly detection) to identify threats.
 3. Alerting System
    - Sends notification or logs suspicious activity
    - Integrate with SIEM tools for correlation and reporting
 4. Response Mechanism
-   - IDS is passive and does not block threats, it only monitors behaviours.
+   - IDS is passive and does not block threats, it only monitors behaviors.
    - Alerts administrators for manual intervention.
 
 ## Common Attacks Detected by IDS

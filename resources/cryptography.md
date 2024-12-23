@@ -39,11 +39,11 @@ The goal is to protect the confidentiality, integrity and availability of data, 
 
 ## CIA Triad
 
-The CIA triad is a model in Information Security that emphasises 3 core principles for protecting data and systems and we need to balance all 3.
+The CIA triad is a model in Information Security that emphasizes 3 core principles for protecting data and systems and we need to balance all 3.
 
-**Confidentality**
+**Confidentiality**
 
-- Ensures that sensitive information is accessed only by authorised individuals and not exposed to unauthorised personnel.
+- Ensures that sensitive information is accessed only by authorized individuals and not exposed to unauthorized personnel.
 - Techniques
   - Encryption
   - Access control
@@ -51,7 +51,7 @@ The CIA triad is a model in Information Security that emphasises 3 core principl
 
 **Integrity**
 
-- Ensures that data remains accurate, consistent and unmodified during storage or transmission by unauthorised personnel.
+- Ensures that data remains accurate, consistent and unmodified during storage or transmission by unauthorized personnel.
 - Techniques
   - Hashing
   - Digital Signatures
@@ -59,7 +59,7 @@ The CIA triad is a model in Information Security that emphasises 3 core principl
 
 **Availability**
 
-- Ensures that information and systems are accessible to authorised personnel.
+- Ensures that information and systems are accessible to authorized personnel.
 - System must resist disruptions such as cyber attacks, natural disasters or hardware failures.
 - Techniques
   - DDoS protection
@@ -154,7 +154,7 @@ RSA key exchange process
 
 ## Explain the concept of least privilege and why it’s important in information security
 
-The principle of least privilege means granting users and systems only the minimum level of access needed for them to complete their tasks, this minimises the risk of accidental or malicious damage to sensitive information
+The principle of least privilege means granting users and systems only the minimum level of access needed for them to complete their tasks, this minimizes the risk of accidental or malicious damage to sensitive information
 
 ## What is multi-factor authentication (MFA) and why is it important?
 

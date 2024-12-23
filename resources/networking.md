@@ -6,7 +6,7 @@ Networks are simply things connected, it can be found in all walks of life such 
 
 ## What is the Internet?
 
-The internet is a giant network that consists of many small networks within itself, it allows devices and servers to communicate and share information through set of standardised protocols known as Internet Protocol (IP)
+The internet is a giant network that consists of many small networks within itself, it allows devices and servers to communicate and share information through set of standardized protocols known as Internet Protocol (IP)
 
 ![Internet](./images/networking/internet.png)
 
@@ -25,7 +25,7 @@ The internet is a giant network that consists of many small networks within itse
 ### IP Address
 
 - Identify a host on a network
-- Made up of 4 octets, betwee the range of 0 and 255 (inclusive)
+- Made up of 4 octets, between the range of 0 and 255 (inclusive)
 - Mutable
 - Public address -> identify devices on the internet
 - Private address -> identify devices amongst other devices
@@ -104,7 +104,7 @@ TLDR, speed > reliability - UDP, otherwise TCP.
 ![Layer 7](./images/networking/layer_7.png)
 
 - Only layer that directly interacts with data from the user
-- Helps to initate communication via protocols such as HTTP and SMTP
+- Helps to initiate communication via protocols such as HTTP and SMTP
 
 ### Layer 6 - The Presentation Layer
 
@@ -265,7 +265,7 @@ Receiver: Layer 1 -> Layer 7
 
 - Network security that monitors and control incoming/outgoing traffic based on pre-defined security rule.
 - Purpose
-  - Block unauthorised access and ensure that only legit traffic can go through
+  - Block unauthorized access and ensure that only legit traffic can go through
 
 ### What is a DNS?
 

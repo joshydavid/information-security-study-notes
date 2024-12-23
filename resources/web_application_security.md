@@ -21,8 +21,8 @@ SQL injection is an attack where user's inputs (malicious SQL queries) are treat
 
 Prevention
 
-- Use parameterised queries
-- Validate and sanitise inputs
+- Use parameterized queries
+- Validate and sanitize inputs
 - Escape special characters
 - Use Object-Relational Mapping (ORM) tools
 
@@ -36,7 +36,7 @@ Cross-Site Scripting (XSS) occurs when an attacker injects malicious scripts int
 
 Prevention
 
-- Sanitise and escape user inputs
+- Sanitize and escape user inputs
 - Use content security policies (CSP)
 - Implement httpOnly and secure flags on cookies
 
@@ -54,7 +54,7 @@ CSRF attack will not be required if you can do XSS - stronger.
 - Cross-site scripting is an attack that injects malicious code into web pages.
 - 3 types of XSS, reflected, stored and DOM-based XSS.
   - Reflected and stored XSS involves the server while DOM-based XSS involves only the client.
-  - XSS can be prevented by validating and sanitising user inputs so that they are not treated as codes, using security headers like `Content-Security-Policy` or using httpOnly flag to prevent JavaScript from accessing the cookie.
+  - XSS can be prevented by validating and sanitizing user inputs so that they are not treated as codes, using security headers like `Content-Security-Policy` or using httpOnly flag to prevent JavaScript from accessing the cookie.
 
 ## What is a Zero-Day vulnerability? Can you provide an example of how it can be exploited?
 
@@ -62,7 +62,7 @@ A Zero-Day vulnerability is a previously unknown security flaw that attackers ca
 
 ## Zero Trust Security
 
-Assumes no one, whether inside or outside the organisation should be trusted by default. Never trust, and always verify. Cyber attacks can happen from both internal/external, every request to the system should be verified.
+Assumes no one, whether inside or outside the organization should be trusted by default. Never trust, and always verify. Cyber attacks can happen from both internal/external, every request to the system should be verified.
 
 ## CSRF Attacks
 
@@ -90,16 +90,16 @@ Write software in a way that protects against security vulnerabilities and ensur
    - Valid all inputs on server side
    - Only allow digits for phone number, not text
    - Use regular expressions to validate inputs
-   - Treat all user inputs as untrusted and sanitise them
+   - Treat all user inputs as untrusted and sanitize them
 2. Output encoding
    - Data displayed to user is not executed as code, to prevent XSS
      - Convert special characters `> < & "` to HTML entities (`&lt, &gt`)
      - URL encoding
      - JavaScript and CSS encoding
-3. Use parameterised queries for database access to prevent SQL injections
+3. Use parameterized queries for database access to prevent SQL injections
    - No concatenation to form SQL queries
-   - Parameterised queries ensure that user input is treated as data, and not executable code
-4. Authentication (Prove who you are) and Authorisation (Access control)
+   - Parameterized queries ensure that user input is treated as data, and not executable code
+4. Authentication (Prove who you are) and Authorization (Access control)
    - Hash password using strong algorithms like bcrypt
    - Add salt to prevent 2 same passwords from having the same digest, and to prevent rainbow table attacks
    - Implement MFA to add extra layer of security
