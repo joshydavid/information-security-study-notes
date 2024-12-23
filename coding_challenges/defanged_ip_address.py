@@ -1,7 +1,7 @@
 class Solution:
     def defangIPAddr(self, address):
         """
-        - https://leetcode.com/problems/defanging-an-ip-address/description/
+        - https://leetcode.com/problems/defanging-an-ip-address/
         - can the input be empty?
         - is the input always a valid IPv4 address?
         """

@@ -1,7 +1,7 @@
 class Solution:
     def binarySearch(self, nums, target):
         """
-        - https://leetcode.com/problems/binary-search/description/
+        - https://leetcode.com/problems/binary-search/
         - can the input be empty?
         - is the input always sorted?
         - what to return if target is not found?

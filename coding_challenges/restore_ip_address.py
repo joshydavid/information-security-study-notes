@@ -1,7 +1,7 @@
 class Solution:
     def restoreIpAddresses(self, s):
         """
-        - https://leetcode.com/problems/restore-ip-addresses/description/
+        - https://leetcode.com/problems/restore-ip-addresses/
         - can s be empty?
         - does s only contain valid digits?
         """

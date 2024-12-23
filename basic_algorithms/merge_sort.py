@@ -1,5 +1,11 @@
 class Solution:
     def mergeSort(self, nums):
+        """
+        - https://leetcode.com/problems/sort-an-array/
+        - can the input be empty?
+        - does it only contain valid numbers?
+        """
+
         # base case, already sorted
         if len(nums) <= 1:
             return nums

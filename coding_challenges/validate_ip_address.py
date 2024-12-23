@@ -1,7 +1,7 @@
 class Solution:
     def validIPAddress(self, queryIP):
         """
-        - https://leetcode.com/problems/validate-ip-address/submissions/1462884960/
+        - https://leetcode.com/problems/validate-ip-address/
         - can the input be empty?
         - is the input always a valid IPv4 or IPv6?
         """
