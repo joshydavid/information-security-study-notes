@@ -375,4 +375,4 @@ In PKI, digital certs issued by CA contain the public key and information about 
 - Generate a random symmetric key for file encryption using AES
 - Encrypt the symmetric key with the recipient's public key using RSA
 - Transmit the encrypted file and the encrypted key
-- The recipient uses their private key to decrypt the symmetric key, and then use the symmetric key to decrypt the encrypted file.
+- The recipient uses their private key to decrypt the symmetric key, and then use the symmetric key 
