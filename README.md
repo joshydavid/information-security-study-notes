@@ -23,4 +23,7 @@
 
 <div style="text-align: center;">
   <a href="https://www.linkedin.com/in/joshydavid/">
-    <img src="https://github.com/user-attachments/assets/4dfe0c89-8ced
+    <img src="https://github.com/user-attachments/assets/4dfe0c89-8ced-4e08-bcf3-6261bdbb956d" width="100">
+    <p>Joshua David</p>
+  </a>
+</div>

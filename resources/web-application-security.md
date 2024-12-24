@@ -112,4 +112,74 @@ Write software in a way that protects against security vulnerabilities and ensur
    - Hash password using strong algorithms like bcrypt
    - Add salt to prevent 2 same passwords from having the same digest, and to prevent rainbow table attacks
    - Implement MFA to add extra layer of security
-   - Implement RBAC to ensure users only have access to t
+   - Implement RBAC to ensure users only have access to the resources they need
+   - Ensure that authentication tokens (sessionID, JWTs) are securely stored and transmitted only via HTTPS to prevent eavesdropping
+5. Secure Communication
+   - To prevent man-in-the-middle attacks, and avoid exposing sensitive data -> always use HTTPS (SSL/TLS) to encrypt data that is transmitted over the network
+   - Use latest secure version of TLS
+6. Use Strong Cryptography
+   - Weak cryptography can allow attackers to easily decrypt sensitive information/tamper with it
+   - Use modern cryptographic algorithms (AES-256, RSA-2048)
+   - Use salt for hashing passwords and keys
+   - Never hard-code sensitive keys or cryptographic secrets in the source code
+   - For symmetric encryption use secure key management system to protect the keys
+7. Security Headers
+   - Set Content-Security-Policy (CSP) headers to control which resources can be loaded on the site
+
+## Scenarios
+
+**Cross-Site Scripting (XSS) Attack**
+
+Scenario: A user submits a comment on a blog page, and the content is displayed without any validation or sanitization. The comment includes a malicious script that, when viewed by other users, sends their session cookies to an attacker’s server.
+Question: How would you prevent this type of attack?
+
+Answer Focus: Explain input sanitization (e.g., using libraries like OWASP Java HTML Sanitizer), Content Security Policy (CSP), and using HTTPOnly and Secure flags for cookies.
+
+**SQL Injection**
+
+Scenario: An application allows users to search for products by entering a search query. The application directly inserts the user input into an SQL query without proper sanitization, leading to a potential SQL injection vulnerability. An attacker inputs ' OR 1=1 -- into the search box and gains access to sensitive data.
+Question: How would you defend against SQL injection attacks?
+
+Answer Focus: Use prepared statements, parameterized queries, and ORM frameworks to prevent direct interaction between user input and SQL queries.
+
+**Cross-Site Request Forgery (CSRF)**
+
+Scenario: A user is logged into a banking website. The attacker sends a link via email, tricking the user into clicking on it. The link causes an unintended money transfer from the user’s account to the attacker’s account.
+Question: How can you mitigate CSRF risks in a web application?
+
+Answer Focus: Implement anti-CSRF tokens, ensure that sensitive actions are protected by POST methods, and use SameSite cookie attributes to prevent cookies from being sent with cross-origin requests.
+
+**Insecure Direct Object References (IDOR)**
+
+Scenario: A user can modify the URL in their browser to access another user’s data (e.g., changing user=123 to user=124 to view another user’s private profile).
+Question: How would you address IDOR vulnerabilities?
+
+Answer Focus: Use proper authorization checks on the server side to ensure users can only access resources they’re permitted to, even if the object references in the URL are manipulated.
+
+**Session Fixation Attack**
+
+Scenario: An attacker forces a victim to use a specific session ID by embedding it in a URL. After the victim logs in with that session ID, the attacker can hijack the session and perform malicious actions on their behalf.
+Question: How would you mitigate session fixation attacks?
+
+Answer Focus: Regenerate session IDs after login and use secure cookie flags (Secure, HttpOnly, SameSite). Enforce strong session management practices.
+
+**Broken Authentication and Session Management**
+
+Scenario: The application uses weak passwords and does not properly invalidate sessions when a user logs out. An attacker exploits this by reusing an old session cookie to impersonate the user.
+Question: What steps would you take to improve authentication and session management?
+
+Answer Focus: Implement multi-factor authentication (MFA), enforce strong password policies, use proper session expiration, and ensure session tokens are securely stored.
+
+**Security Misconfiguration**
+
+Scenario: A web application’s production environment is running with default configurations, revealing sensitive error messages and exposing internal files that should not be publicly accessible.
+Question: How would you address security misconfiguration issues?
+
+Answer Focus: Regularly audit and harden configurations, disable unnecessary services, and avoid default settings. Use error handling that does not expose sensitive information to users.
+
+**Sensitive Data Exposure**
+
+Scenario: A web application stores user credit card information in plain text in the database. An attacker gains access to the database and retrieves sensitive user data.
+Question: What actions would you take to prevent sensitive data exposure?
+
+Answer Focus: Implement encryption (both at rest and in transit), tokenize sensitive data, and follow the principles of least privilege for access control.
