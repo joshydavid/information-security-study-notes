@@ -306,19 +306,19 @@ Receiver: Layer 1 -> Layer 7
   - Use fiber optics for secure communication, as they are harder to tap.
   - Wireless networks should use strong WPA2 or WPA3 encryption.
 
-### What is a firewall and how does it function in network security?
+## What is a firewall and how does it function in network security?
 
 - A firewall is a network security that monitors and control incoming/outgoing traffic based on pre-defined security rule.
 - Purpose
   - Block unauthorized access and ensure that only legit traffic can go through
   - Security Gate (IDS - Security Guard)
 
-### What is a DNS?
+## What is a DNS?
 
 DNS stands for Domain Name System, it is a system that translate human-readable domain name such as Apple.com into machine-readable IP address such as 192.168.1.1
 DNS is like a phonebook of the internet so that we don't have to remember the complex IP address.
 
-### What happens when you type a URL into the browser?
+## What happens when you type a URL into the browser?
 
 - Bob enters URL into the browser <https://www.apple.com/sg/iphone-16-pro/> and hits Enter.
 
@@ -350,14 +350,14 @@ DNS is like a phonebook of the internet so that we don't have to remember the co
 
 - The browser renders the HTML content.
 
-### How does the internet work?
+## How does the internet work?
 
 - The internet is a global network that uses protocols like TCP to communicate.
 - When a device connects to the internet, it uses an IP address to identify itself.
 - Data is transferred in packets over a series of routers, switches, and networks, ensuring communication between devices.
 - Protocols like HTTP, DNS, and SMTP ensure specific functions like web browsing, domain name resolution, and email exchange.
 
-### What happens when you visit Apple.com in the browser?
+## What happens when you visit Apple.com in the browser?
 
 - Enter Apple.com into the browser
 - Translate the URL (Apple.com) into an IP address
@@ -374,7 +374,7 @@ DNS is like a phonebook of the internet so that we don't have to remember the co
 - The server processes the request and responds with the page's HTML, CSS, JavaScript and other static assets.
 - The browser then processes the files and renders the page to the frontend.
 
-### What happens when you do a search on Google?
+## What happens when you do a search on Google?
 
 - Enter Apple internship as part of the search query
 - The browser resolves the IP address for Google's search service via DNS and establish a connection via HTTPS
