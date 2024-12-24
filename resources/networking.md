@@ -57,12 +57,6 @@ The internet is a giant network that consists of many small networks within itse
 
 ![IP Address](./images/networking/ip_address.png)
 
-### IPSec
-
-IPSec (Internet Protocol Security) is a framework of protocols used to secure communications over IP networks by providing confidentiality, integrity, and authentication. It ensures that data traveling across a network (e.g., the internet) is encrypted and protected from tampering or unauthorized access.
-
-IPSec operates at the Network Layer (Layer 3) of the OSI model, making it versatile for securing any type of IP traffic.
-
 ### MAC Address
 
 - Found in device's motherboard
@@ -72,7 +66,13 @@ IPSec operates at the Network Layer (Layer 3) of the OSI model, making it versat
 - Can be spoofed - ARP poisoning
 - Networked device pretends to identify as another using its MAC address
 
-### ARP Poisoning
+## IPSec
+
+IPSec (Internet Protocol Security) is a framework of protocols used to secure communications over IP networks by providing confidentiality, integrity, and authentication. It ensures that data traveling across a network (e.g., the internet) is encrypted and protected from tampering or unauthorized access.
+
+IPSec operates at the Network Layer (Layer 3) of the OSI model, making it versatile for securing any type of IP traffic.
+
+## ARP Poisoning
 
 ARP poisoning (ARP spoofing) is a type of cyberattack in which an attacker sends false ARP to a network, tricking device into associating the attacker's MAC address with the IP address of another device.
 
