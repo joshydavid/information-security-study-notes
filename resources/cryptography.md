@@ -121,7 +121,7 @@ Best of both world - envelope encryption.
   - Providing authentication: Uses digital certificates to verify the server’s identity.
   - Prevents man-in-the-middle (MITM) attacks and maintains trust in online communications.
 
-## SSL/TLS Handshake Process
+## Can you explain how the SSL/TLS handshake process works?
 
 RSA key exchange process
 

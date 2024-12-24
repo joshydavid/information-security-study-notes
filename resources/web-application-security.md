@@ -42,6 +42,15 @@ Prevention
 
 CSRF attack will not be required if you can do XSS - stronger.
 
+## Describe a situation where you detected a security vulnerability and how you addressed it
+
+During a vulnerability assessment of a web application, I discovered that the site was vulnerable to SQL injection attacks because user inputs weren’t properly sanitized. I immediately reported the issue to the development team. Together, we implemented input validation and used prepared statements in SQL queries to prevent injection attacks. Additionally, we ran further tests and updated the codebase to ensure the issue didn’t recur.
+
+- Key actions:
+  - Detection: Identifying the vulnerability through automated scans or manual testing.
+  - Mitigation: Collaborating with the team to implement a solution (in this case, sanitizing inputs and using secure coding practices).
+  - Follow-up: Verifying that the vulnerability was effectively addressed and adding further layers of security.
+
 ## What are the best practices for securely storing passwords?
 
 - Never store passwords in plaintext.

@@ -8,6 +8,11 @@ Networks are simply things connected, it can be found in all walks of life such 
 
 The internet is a giant network that consists of many small networks within itself, it allows devices and servers to communicate and share information through set of standardized protocols known as Internet Protocol (IP)
 
+**Commonly Used Protocols**
+
+- TCP: ensures reliable data transmission (web browsing, email) [Reliability > Speed]
+- UDP: provides faster, communication for applications like live streaming or gaming, packets may be lost. [Speed > Reliability]
+
 ![Internet](./images/networking/internet.png)
 
 ## Identifying Devices on a Network
@@ -37,13 +42,26 @@ The internet is a giant network that consists of many small networks within itse
   - iPhone private IP address (different)
   - MacBook Pro private IP address (different)
 - Running out of IP address as more devices are connected to the internet
+- No built-in encryption or authentication
+- Security relies on external protocols like IPSec
+- Manual configuration or DHCP (Dynamic Host Configuration Protocol) is used.
+- Uses NAT (Network Address Translation) to allow multiple devices to share a single public IP.
 
 **IPv6**
 
 - Newer iteration, up to 2^128 IP address (~340 trillion)
 - Solves the limitation of IPv4
+- IPSec is built-in, providing confidentiality, integrity and authentication
+- Supports auto configuration: Devices can generate their own addresses using their MAC address and network prefix.
+- NAT is not required because of the abundant address space.
 
 ![IP Address](./images/networking/ip_address.png)
+
+### IPSec
+
+IPSec (Internet Protocol Security) is a framework of protocols used to secure communications over IP networks by providing confidentiality, integrity, and authentication. It ensures that data traveling across a network (e.g., the internet) is encrypted and protected from tampering or unauthorized access.
+
+IPSec operates at the Network Layer (Layer 3) of the OSI model, making it versatile for securing any type of IP traffic.
 
 ### MAC Address
 
@@ -53,6 +71,33 @@ The internet is a giant network that consists of many small networks within itse
 - First 6 digit represents the company, last 6 represents a unique number
 - Can be spoofed - ARP poisoning
 - Networked device pretends to identify as another using its MAC address
+
+### ARP Poisoning
+
+ARP poisoning (ARP spoofing) is a type of cyberattack in which an attacker sends false ARP to a network, tricking device into associating the attacker's MAC address with the IP address of another device.
+
+**How it works**
+
+- Attacker sends fake ARP message, attacker tells Device A "I am the router at 192.168.1.1"
+- Device A updates its ARP table to map the attacker's MAC address with the router's IP address
+- The traffic now meant for the router is sent to the attacker instead
+- The attacker can now intercept, modify or drop packets
+
+**Impact**
+
+- Intercept traffic, eavesdrop on communication between devices
+- Modify traffic in transit
+- Launch DDoS or MitM attacks
+
+**Prevention**
+
+- Use static ARP entries, manually assign MAC-to-IP mappings for critical devices
+- Enable ARP spoofing detection
+- Use secure protocols like HTTPS, SSH, VPNs to protect data
+- Divide networks into smaller segments
+- Implement dynamic ARP inspection
+- Monitor networking traffic
+- Use IPv6 as it uses Neighbor Discovery Protocol (NDP) instead of ARP
 
 ## Ping
 
@@ -261,19 +306,49 @@ Receiver: Layer 1 -> Layer 7
   - Use fiber optics for secure communication, as they are harder to tap.
   - Wireless networks should use strong WPA2 or WPA3 encryption.
 
-### Firewall
+### What is a firewall and how does it function in network security?
 
-- Network security that monitors and control incoming/outgoing traffic based on pre-defined security rule.
+- A firewall is a network security that monitors and control incoming/outgoing traffic based on pre-defined security rule.
 - Purpose
   - Block unauthorized access and ensure that only legit traffic can go through
+  - Security Gate (IDS - Security Guard)
 
 ### What is a DNS?
 
 DNS stands for Domain Name System, it is a system that translate human-readable domain name such as Apple.com into machine-readable IP address such as 192.168.1.1
-
 DNS is like a phonebook of the internet so that we don't have to remember the complex IP address.
 
-When you type a URL into your browser, the DNS first checks if the IP address is already stored in a local DNS cache (on your device, browser, or router). If the IP address is in the cache, the DNS system will use the cached address, which speeds up the process. If the IP address is not cached, the DNS will perform a DNS query to resolve the domain name by looking up the IP address. Once the correct IP address is found, it’s mapped to the domain name, and the browser can then connect to the correct server.
+### What happens when you type a URL into the browser?
+
+- Bob enters URL into the browser <https://www.apple.com/sg/iphone-16-pro/> and hits Enter.
+
+  - Protocol: https
+  - Domain: apple.com
+  - Path: sg/
+  - Resource: iphone-16-pro
+
+- The browser looks up the IP address for the domain using a DNS lookup. To make the lookup process faster, data is cached at different layers
+
+  - Browser cache
+  - OS cache
+  - Local network cache
+  - ISP cache
+
+- If the IP address cannot be found at any of the caches, the browser goes to the DNS servers to do a recursive DNS lookup until the IP address is found
+
+- Now that the IP address is found, the browser establish a TCP connection with the server using a three-way handshake.
+
+  - The client sends a SYN message to the server
+  - The server responds with a SYN-ACK message
+  - The client sends an ACK knowledge back to the server, completing the connection
+
+- Since the connection is over HTTPS, the browser negotiates an SSL/TLS handshake with the server. This ensures that the data sent between the client and server is encrypted, maintaining privacy and integrity of the communication.
+
+- The browser sends an HTTPS request to the server
+
+- The server processes the request and sends back the response.
+
+- The browser renders the HTML content.
 
 ### How does the internet work?
 
