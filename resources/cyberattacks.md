@@ -1,6 +1,22 @@
 # Information Security Interview Preparation (Cyberattacks)
 
-## Threat vs Vulnerability vs Risk
+## Define the terms Virus, Malware, and Ransomware
+
+### Virus
+
+A program that replicates itself and spreads to other files or systems, often causing harm.
+
+### Malware
+
+A broader term encompassing any malicious software that disrupts or gains unauthorized access to computer systems.
+
+### Ransomeware
+
+A malicious software encrypting files or computer systems and requesting a ransom for their decryption.
+
+###
+
+## Define the terms Threat vs Vulnerability vs Risk
 
 ### Threat
 
@@ -36,7 +52,8 @@ An attacker manipulates individuals into giving up sensitive information or perf
 
 An attacker tricks individuals into revealing sensitive information, such as passwords or financial data, by masquerading as a trusted entity.
 
-- E.g. Fake emails or websites resembling legitimate ones to steal credentials.
+- E.g. Fake emails or websites resembling legitimate ones to steal credentials, an email claiming to be from a bank, requesting the recipient to provide their login credentials by clicking a link that leads to a fake website.
+
 - Mitigation:
   - Implement email filtering and anti-phishing tools.
   - Train employees to recognize phishing attempts.
@@ -68,9 +85,9 @@ Malware encrypts data, and attackers demand payment for the decryption key.
 
 - E.g. WannaCry ransomware attacks on healthcare systems.
 - Mitigation:
-- Regularly back up data and keep backups offline.
-- Patch software and update systems to fix vulnerabilities.
-- Use endpoint protection solutions to detect malicious activity.
+  - Regularly back up data and keep backups offline.
+  - Patch software and update systems to fix vulnerabilities.
+  - Use endpoint protection solutions to detect malicious activity.
 
 ### Privilege Escalation
 
