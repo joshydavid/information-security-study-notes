@@ -17,7 +17,6 @@ Answer: Command injection; sanitize user_input and use parameterised queries
 ## Broken Authentication
 
 ```
-
 stored_password = "plaintextpassword"
 if input_password == stored_password:
 print("Login successful")
@@ -53,7 +52,6 @@ Answer: Debug mode reveals sensitive information (stack traces). Disable it in p
 ## Broken Access Control
 
 ```
-
 @app.route('/admin')
 def admin_dashboard():
 return "Admin Dashboard"
@@ -65,7 +63,6 @@ Answer: Use role-based access control and authentication middleware.
 ## Cross-Site Request Forgery (CSRF)
 
 ```
-
 <form action="/update_profile" method="POST">
     <input type="hidden" name="name" value="hacked">
     <input type="submit">
