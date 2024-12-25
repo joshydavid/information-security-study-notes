@@ -31,7 +31,7 @@ class Solution:
                 j += 1
 
         # append the remaining elements
-
+        # method 1
         while i < len(left):
             result.append(left[i])
             i += 1
@@ -39,6 +39,10 @@ class Solution:
         while j < len(right):
             result.append(right[j])
             j += 1
+
+        # method 2
+        # result.extend(left[i:])
+        # result.extend(right[j:])
 
         return result
 
