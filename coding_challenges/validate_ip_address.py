@@ -71,5 +71,19 @@ if __name__ == "__main__":
     result = solution.validIPAddress(queryIP)
     assert result == "IPv4"
     print(result)
-    print("Test Case Passed!")
+    print("Test Case 1 Passed!")
+    print()
+
+    queryIP = "2001:0db8:85a3:0:0:8A2E:0370:7334"
+    result = solution.validIPAddress(queryIP)
+    assert result == "IPv6"
+    print(result)
+    print("Test Case 2 Passed!")
+    print()
+
+    queryIP = "256.256.256.256"
+    result = solution.validIPAddress(queryIP)
+    assert result == "Neither"
+    print(result)
+    print("Test Case 3 Passed!")
     print()

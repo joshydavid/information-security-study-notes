@@ -10,7 +10,7 @@ A program that replicates itself and spreads to other files or systems, often ca
 
 A broader term encompassing any malicious software that disrupts or gains unauthorized access to computer systems.
 
-### Ransomeware
+### Ransomware
 
 A malicious software encrypting files or computer systems and requesting a ransom for their decryption.
 
@@ -34,7 +34,7 @@ E.g software with known security bugs, weak/reused password
 
 A risk is the potential for loss or damage when a threat exploits a vulnerability, it's the likelihood and impact of harm occurring.
 
-E.g. The risk of a ransomeware attack encrypting critical data due to unpatch systems, the risk of insider threats leaking sensitive data.
+E.g. The risk of a ransomware attack encrypting critical data due to unpatch systems, the risk of insider threats leaking sensitive data.
 
 ## Common Types of Cyberattacks
 
