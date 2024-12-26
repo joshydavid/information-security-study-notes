@@ -29,7 +29,7 @@ if __name__ == "__main__":
     result = solution.binarySearch(nums, target)
     assert result == 4
     print(result)
-    print("Test Case Passed!")
+    print("Test Case 1 Passed!")
     print()
 
     nums = [-1, 0, 3, 5, 9, 12]
@@ -37,5 +37,5 @@ if __name__ == "__main__":
     result = solution.binarySearch(nums, target)
     assert result == -1
     print(result)
-    print("Test Case Passed!")
+    print("Test Case 2 Passed!")
     print()

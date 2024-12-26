@@ -5,8 +5,8 @@
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Books.webp" alt="Books" width="35" height="35" /> Useful Resources
 
 - [Google Security Engineer Study Notes](https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#learning-tips)
-- [Top 50 Cybersecurity Interview Questions for 2025 v1](https://www.edureka.co/blog/interview-questions/cybersecurity-interview-questions/)
-- [Top 50 Cybersecurity Interview Questions for 2025 v2](https://www.simplilearn.com/tutorials/cyber-security-tutorial/cyber-security-interview-questions)
+- [Top 50 Cybersecurity Interview Questions for 2025 I](https://www.edureka.co/blog/interview-questions/cybersecurity-interview-questions/)
+- [Top 50 Cybersecurity Interview Questions for 2025 II](https://www.simplilearn.com/tutorials/cyber-security-tutorial/cyber-security-interview-questions)
 - [Top 60 Cybersecurity Interview Questions for 2025](https://www.geeksforgeeks.org/cyber-security-interview-questions/)
 - [Roadmap](https://roadmap.sh/cyber-security)
 - [Try Hack Me](https://tryhackme.com)

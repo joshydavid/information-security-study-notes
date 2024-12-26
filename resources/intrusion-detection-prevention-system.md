@@ -2,10 +2,10 @@
 
 ## Intrusion Detection System (IDS)
 
-- Passive
 - System designed to monitor and analyze network traffic for signs of security breaches, malicious activities, or policy violations.
 - Does not block traffic (this is firewall)
-- Deployed parallel to network traffic, analyses a copy of the traffic and does not directly interact with it
+- Deployed parallel to network traffic, analyses a copy of the traffic and does not directly interact with it.
+- Passive, requires the intervention of the security team.
 - e.g SIEM system
 
 ## Types of Intrusion Detection System (IDS)
@@ -14,7 +14,7 @@
 
 - Monitors traffic on a network
 - Deployed at critical points (routers, firewalls)
-- Use Case
+- Use case
   - Detect abnormal traffic patterns
   - DoS attacks
   - Protocol misuse
@@ -23,7 +23,7 @@
 
 - Monitors activity on a specific host/device
 - Tracks system logs, file changes and process activity
-- Use Case
+- Use case
   - Detect file integrity issues
   - Unauthorized changes
   - Privilege escalations
@@ -36,10 +36,10 @@
 
 ## Intrusion Prevention System (IPS)
 
-- Active
 - System that monitors, analyses and blocks malicious traffics in real-time.
 - Basically IDS + ability to block malicious traffics
 - Additional layer behind firewall, deployed directly in the path of network traffic
+- Active, does not require the intervention of the security team.
 - E.g Inline firewalls with IPS functionality
 
 ## Types of Intrusion Prevention System (IPS)

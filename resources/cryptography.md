@@ -116,6 +116,26 @@ A MAC is a cryptographic technique that ensures **data integrity and authenticit
 3. Why Use a MAC?
    - A plain hash function doesn’t provide authentication because anyone can compute the hash. A MAC ensures that only someone with the secret key can generate or verify the MAC, thus authenticating the message.
 
+### How HMAC Ensures Integrity
+
+1. Tamper Detection
+   - HMAC uses the secret key in the process, so the output (HMAC) depends on both the message + secret key.
+   - If an attacker modifies the message, the recalculated HMAC will not match the original HMAC, indicating tampering.
+2. Key Dependency
+   - Without the secret key, the attacker cannot generate a valid HMAC for a modified message, making forgery infeasible.
+
+### HMAC Workflow
+
+Sender
+
+- Computes the HMAC of the message using the secret key
+- Sends the message alongside the HMAC to the receiver
+
+Receiver
+
+- Recomputes the HMAC using the received message and the shared key
+- Compares the recomputed HMAC with the received HMAC
+
 ## Cryptography Concepts Comparison
 
 | RSA Signature                                            | HMAC                                                                |
