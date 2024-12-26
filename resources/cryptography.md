@@ -32,6 +32,9 @@ The goal is to protect the confidentiality, integrity and availability of data, 
 **Hashing**
 
 - Converts data into a fixed-size hash known as digest, irreversible, one-way.
+- Deterministic: same input always produces same output (which is why salt is needed)
+- Fast to compute: efficiently generates a hash
+- Collision resistance: no two inputs should produce the same hash
 - E.g SHA-256
 - Use case
   - Password storage
@@ -96,6 +99,23 @@ Defense is hard, as long as we keep the key secret. Good-enough security is good
 
 Best of both world - envelope encryption.
 
+## MAC (Message Authentication Code)
+
+A MAC is a cryptographic technique that ensures **data integrity and authenticity** by combining a secret key with the input message to generate a code. It’s commonly used in secure communications (e.g., HTTPS, TLS).
+
+1. How MAC Works:
+   - A MAC algorithm takes two inputs: the message and a secret key.
+   - It outputs a fixed-size tag (the MAC) that can be used to verify that the message hasn’t been tampered with.
+2. Popular MAC Algorithms:
+   - HMAC (Hash-based Message Authentication Code):
+   - Uses a hash function (e.g., SHA-256) internally.
+   - Resistant to length extension attacks, unlike basic hashing.
+   - CMAC (Cipher-based MAC):
+   - Based on symmetric encryption algorithms like AES.
+   - Used when encryption and authentication are both required.
+3. Why Use a MAC?
+   - A plain hash function doesn’t provide authentication because anyone can compute the hash. A MAC ensures that only someone with the secret key can generate or verify the MAC, thus authenticating the message.
+
 ## Cryptography Concepts Comparison
 
 | RSA Signature                                            | HMAC                                                                |
@@ -155,14 +175,6 @@ RSA key exchange process
 ## Explain the concept of least privilege and why it’s important in information security
 
 The principle of least privilege means granting users and systems only the minimum level of access needed for them to complete their tasks, this minimizes the risk of accidental or malicious damage to sensitive information
-
-## What is multi-factor authentication (MFA) and why is it important?
-
-MFA requires multiple forms of authentication, such as:
-
-- Something you know: Password or PIN.
-- Something you have: Security token or smartphone.
-- Something you are: Biometric data like fingerprints or facial recognition.
 
 ## What is authentication?
 
@@ -326,6 +338,36 @@ MFA requires multiple forms of authentication, such as:
 - Must be safeguarded because anyone with the private key can used it to read encrypted message or sign malicious data
 
 In PKI, digital certs issued by CA contain the public key and information about the owner. Anyone who wants to send an encrypted message to this owner can use the owner's public key and only he can decrypt using his private key.
+
+## Why is SHA hashing algorithms more secure than MD5?
+
+The SHA (Secure Hash Algorithm) family includes SHA-1, SHA-2 (e.g., SHA-256, SHA-512), and SHA-3, with increasing levels of security and resistance to cryptanalysis.
+
+- Strengths of SHA-2 (e.g., SHA-256):
+
+  - Pre-image Resistance: Based on the Merkle-Damgård construction, making it computationally infeasible to reverse-engineer the input.
+  - Collision Resistance: Designed to prevent two distinct inputs from producing the same hash. For SHA-256, finding a collision would require 2^{128} operations.
+  - Wide Adoption: Used in TLS certificates, blockchain (Bitcoin), and digital signatures.
+  - Large Digest Sizes: SHA-256 produces a 256-bit output, making brute force infeasible with current computational power.
+
+- Advancements in SHA-3:
+  - SHA-3 uses a sponge construction instead of Merkle-Damgård, improving resistance to certain types of attacks (e.g., length extension attacks).
+
+## Why is MD5 not secure?
+
+MD5 (Message Digest Algorithm 5) was once widely used but is now considered insecure due to its vulnerability to collisions and other attacks.
+
+- Collision Vulnerability:
+
+  - In 2004, researchers demonstrated practical collisions for MD5, making it unsuitable for digital signatures or certificates.
+  - A collision occurs when two different inputs produce the same hash, undermining the integrity of hashed data.
+
+- Speed as a Weakness:
+  - MD5 is fast, which makes it vulnerable to brute force and rainbow table attacks for password cracking.
+- Length Extension Attacks:
+  - MD5’s Merkle-Damgård construction allows attackers to append data to a hash and compute a new hash without knowing the original input.
+- Deprecated:
+  - MD5 is no longer considered secure for cryptographic purposes and has been replaced by more robust algorithms like SHA-2 and SHA-3.
 
 ## Scenario 1 - Symmetric Encryption in Secure File Storage
 
