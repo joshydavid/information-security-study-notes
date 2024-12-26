@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Web Application Security - OWASP Top 10)
+# Web Application Security - OWASP Top 10
 
 ## Injection Attacks
 

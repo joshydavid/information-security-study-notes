@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Incident Response)
+# Incident Response
 
 ## What are the key elements of a security incident response plan?
 

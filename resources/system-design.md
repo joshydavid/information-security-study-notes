@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (System Design)
+# System Design
 
 ## How would you secure an API service that handles sensitive user data?
 

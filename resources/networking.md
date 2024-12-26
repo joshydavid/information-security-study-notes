@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Networking Fundamentals)
+# Networking Fundamentals
 
 ## What is Networking?
 

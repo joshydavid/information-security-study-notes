@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Cyberattacks)
+# Cyberattacks
 
 ## Define the terms Virus, Malware, and Ransomware
 

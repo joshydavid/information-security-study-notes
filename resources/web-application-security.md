@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Web Application Security)
+# Web Application Security
 
 ## What is OWASP (Open Web Application Security Project)?
 

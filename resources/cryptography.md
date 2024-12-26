@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Cryptography Fundamentals)
+# Cryptography Fundamentals
 
 ## Explain the term Cryptography
 

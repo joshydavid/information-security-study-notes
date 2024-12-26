@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Intrusion Detection and Prevention System)
+# Intrusion Detection and Prevention System
 
 ## Intrusion Detection System (IDS)
 

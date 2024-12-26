@@ -1,4 +1,4 @@
-# Information Security Interview Preparation (Scenarios)
+# Scenarios
 
 ## How would you handle a DDoS attack?
 
