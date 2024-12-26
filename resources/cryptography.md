@@ -129,7 +129,7 @@ A MAC is a cryptographic technique that ensures **data integrity and authenticit
 
 |                        | RSA Signature                                                       | RSA Encryption                                                     |
 | ---------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| Sender (Private key)   | Yes, sender needs private to sign the message                       | No, sender just needs receiver’s public key to encrypt the message |
+| Sender (Private key)   | Yes, sender needs the private key to sign the message               | No, sender just needs receiver’s public key to encrypt the message |
 | Receiver (Private key) | No, receiver just needs sender’s public key to verify the signature | Yes, receiver requires its private key to decrypt                  |
 | Limitation             | None, can sign on any size (signs on the digest, the hash)          | Only encrypt data smaller than modulus n                           |
 
@@ -170,7 +170,7 @@ RSA key exchange process
 
 - Hashing is a one-way operation that takes an input and converts it into a fixed-size string of characters, which is typically a hash value known as digest. This is irreversible since it's one way.
 - Encryption is a two-way operation, the data is scrambled and transformed into unreadable format but it can later be decrypted and reverted to the original form using the correct key.
-- Encoding is the process to transform the data in such a format that can be used by different systems. No keys require to decode, its more for data usability instead of confidential.
+- Encoding is the process to transform the data in such a format that can be used by different systems. No keys require to decode, its more for data usability instead of confidentiality.
 
 ## Explain the concept of least privilege and why it’s important in information security
 
@@ -335,7 +335,7 @@ The principle of least privilege means granting users and systems only the minim
 - Kept secret and is used
   - to decrypt message encrypted with the corresponding public key
   - to create digital signature, proving authenticity and integrity => non-repudiation as well
-- Must be safeguarded because anyone with the private key can used it to read encrypted message or sign malicious data
+- Must be safeguarded because anyone with the private key can use it to read encrypted message or sign malicious data
 
 In PKI, digital certs issued by CA contain the public key and information about the owner. Anyone who wants to send an encrypted message to this owner can use the owner's public key and only he can decrypt using his private key.
 

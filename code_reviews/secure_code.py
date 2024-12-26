@@ -15,21 +15,21 @@ key = b"sixteen_byte_key"
 def get_user():
     user_id = request.args.get("user_id")
 
-    # Validate input
+    # ✅ Validate input
     if not user_id or not user_id.isdigit():
         return jsonify({"error": "Invalid user_id"}), 400
 
     conn = sqlite3.connect("example.db")
     cursor = conn.cursor()
 
-    # Secure query with parameterized statements to prevent SQL injections
+    # ✅ Secure query with parameterized statements to prevent SQL injections
     query = "SELECT * FROM users WHERE id = ?;"
     cursor.execute(query, (user_id,))
     user = cursor.fetchone()
     conn.close()
 
     if user:
-        # Encrypt the email before returning
+        # ✅ Encrypt the email before returning to the client
         cipher = AES.new(key, AES.MODE_CBC)
         encrypted_email = cipher.encrypt(pad(user[2].encode(), AES.block_size))
         return jsonify({"id": user[0], "name": user[1], "email": encrypted_email.hex()})

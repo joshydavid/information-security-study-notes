@@ -51,14 +51,15 @@ if __name__ == "__main__":
 
     cipher = "Fubswrjudskb lv dq lqwhuhvwlqj vxemhfw"
     plaintext = "Cryptography is an interesting subject"
-    result_v3 = solution.caesarCipherDecrypt(cipher, 3)
-    assert result_v3 == plaintext
-    print(result_v3)
+    k = 3
+    result = solution.caesarCipherDecrypt(cipher, k)
+    assert result == plaintext
+    print(result)
     print("Test Case 3 Passed!")
     print()
 
-    sentence = ""
-    result = solution.caesarCipherDecrypt(sentence, k)
+    text = ""
+    result = solution.caesarCipherDecrypt(text, k)
     expected = ""
     assert result == expected
     print("Empty String")

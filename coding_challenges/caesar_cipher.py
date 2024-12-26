@@ -41,41 +41,41 @@ if __name__ == "__main__":
     print("Test Case 1 Passed!")
     print()
 
-    text_v2 = "abcdefghijklmnopqrstuvwxyz"
-    result_v2 = solution.caesarCipher(text_v2, k)
-    assert result_v2 == "cdefghijklmnopqrstuvwxyzab"
-    print(result_v2)
+    text = "abcdefghijklmnopqrstuvwxyz"
+    result = solution.caesarCipher(text, k)
+    assert result == "cdefghijklmnopqrstuvwxyzab"
+    print(result)
     print("Test Case 2 Passed!")
     print()
 
-    k_v3 = 3
-    text_v3 = "Cryptography is an interesting subject"
-    result_v3 = solution.caesarCipher(text_v3, k_v3)
-    assert result_v3 == "Fubswrjudskb lv dq lqwhuhvwlqj vxemhfw"
-    print(result_v3)
+    text = "Cryptography is an interesting subject"
+    k = 3
+    result = solution.caesarCipher(text, k)
+    assert result == "Fubswrjudskb lv dq lqwhuhvwlqj vxemhfw"
+    print(result)
     print("Test Case 3 Passed!")
     print()
 
-    sentence = ""
-    result = solution.caesarCipher(sentence, k)
+    text = ""
+    result = solution.caesarCipher(text, k)
     expected = ""
     assert result == expected
     print("Empty String")
     print("Test Case 4 Passed!")
     print()
 
-    sentence = "Hello"
+    text = "Hello"
     k = 1
-    result = solution.caesarCipher(sentence, k)
+    result = solution.caesarCipher(text, k)
     expected = "Ifmmp"
     assert result == expected
     print(result)
     print("Test Case 5 Passed!")
     print()
 
-    sentence = "Hello"
+    text = "Hello"
     k = 0
-    result = solution.caesarCipher(sentence, k)
+    result = solution.caesarCipher(text, k)
     expected = "Hello"
     assert result == expected
     print(result)
