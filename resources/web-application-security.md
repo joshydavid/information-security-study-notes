@@ -96,7 +96,7 @@ CORS
 Write software in a way that protects against security vulnerabilities and ensures CIA is fulfilled.
 
 1. Input validation
-   - Valid all inputs on server side
+   - Validate all inputs on server side
    - Only allow digits for phone number, not text
    - Use regular expressions to validate inputs
    - Treat all user inputs as untrusted and sanitize them
