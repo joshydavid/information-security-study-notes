@@ -20,21 +20,24 @@ A malicious software encrypting files or computer systems and requesting a ranso
 
 ### Threat
 
-A threat is anything that has the potential to exploit a vulnerability and cause harm to a system. It represents a potential danger, and requires a vulnerability to exist for it pose a risk.
+A threat is a potential danger that exploits a vulnerability and cause harm to a system. It requires a vulnerability to exist for it pose a risk.
 
 E.g a cybercriminal attempting to steal sensitive data.
 
 ### Vulnerability
 
-A vulnerability is a weakness or flaw in a system that can be exploited by a threat to cause harm.
+A vulnerability is a weakness or flaw in a system that could be exploited by a threat to compromise confidentality, integrity, or availability.
 
-E.g software with known security bugs, weak/reused password
+E.g software with known security bugs, weak/reused password, outdated dependencies in a React app
 
 ### Risk
 
-A risk is the potential for loss or damage when a threat exploits a vulnerability, it's the likelihood and impact of harm occurring.
+A risk is the likelihood and impact of a threat exploiting a vulnerability resulting in potential harm.
 
-E.g. The risk of a ransomware attack encrypting critical data due to unpatch systems, the risk of insider threats leaking sensitive data.
+E.g.
+
+- If an outdated library (vulnerability) in your React app is exposed on the internet and a hacker (threat) exploits it, it could lead to a data breach (impact).
+- The risk of a ransomware attack encrypting critical data due to unpatch systems, the risk of insider threats leaking sensitive data.
 
 ## Common Types of Cyberattacks
 
