@@ -1,6 +1,6 @@
 # Network Level and Logging
 
-## Common Ports Involving Security: Risks & Mitigations
+## Common Ports Involving Security
 
 ### Common Ports
 
@@ -59,7 +59,7 @@ Traceroute is a network diagnostic tool used to trace the path data packets take
 
 TCP/IP (Transmission Control Protocol/Internet Protocol) is the foundation of internet communication. TCP ensures reliable communication (connection-oriented), while IP handles addressing and routing of data packets across networks.
 
-## What is OSI model?
+## What is the OSI model?
 
 The OSI (Open Systems Interconnection) Model is a conceptual framework for understanding network communication in seven layers:
 
@@ -70,6 +70,18 @@ The OSI (Open Systems Interconnection) Model is a conceptual framework for under
 5. Session: Management of sessions (e.g., opening, closing connections).
 6. Presentation: Data encryption, compression.
 7. Application: End-user services (e.g., HTTP, FTP).
+
+## Explain what information is added to a packet at each stop of the 7-layer OSI model
+
+Each layer in the OSI model adds specific headers to a packet:
+
+- Physical Layer: Bit-level data.
+- Data Link Layer: Frame headers (MAC addresses).
+- Network Layer: IP header (IP addresses).
+- Transport Layer: TCP/UDP header (port numbers).
+- Session Layer: Session data.
+- Presentation Layer: Encryption or data transformation.
+- Application Layer: Data relevant to the application (HTTP, FTP).
 
 ## How does a router differ from a switch?
 
@@ -89,15 +101,3 @@ In the same netowrk, a packet is sent directly to the destination host's MAC add
 
 - TCP is more secure because it establishes a connection, ensures reliable data delivery, and checks for errors.
 - UDP does not offer the same reliability or error correction.
-
-## Explain what information is added to a packet at each stop of the 7-layer OSI model
-
-Each layer in the OSI model adds specific headers to a packet:
-
-- Physical Layer: Bit-level data.
-- Data Link Layer: Frame headers (MAC addresses).
-- Network Layer: IP header (IP addresses).
-- Transport Layer: TCP/UDP header (port numbers).
-- Session Layer: Session data.
-- Presentation Layer: Encryption or data transformation.
-- Application Layer: Data relevant to the application (HTTP, FTP).

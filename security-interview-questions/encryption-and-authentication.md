@@ -98,7 +98,7 @@ RSA key exchange process
 
   - Data is transmitted securely using symmetric encryption.
 
-## How Does HMAC Work?
+## How does HMAC work?
 
 HMAC (Hash-Based Message Authentication Code) is a mechanism for verifying data integrity and authenticity using a cryptographic hash function combined with a secret key.
 
@@ -107,13 +107,13 @@ HMAC (Hash-Based Message Authentication Code) is a mechanism for verifying data 
 - The resulting hash is sent with the message to the recipient.
 - The recipient hashes the message with the same key and compares it to the provided hash. If they match, the message is verified.
 
-## Why is HMAC Designed in That Way?
+## Why is HMAC designed in that way?
 
-- Purpose: HMAC is designed to ensure both data integrity (verifying the message has not been tampered with) and authenticity (verifying the sender is legitimate).
+- Purpose: HMAC is designed to ensure both data integrity (verifying the message has not been tampered with) and authenticity (verifying the sender is legitimate). Does not fulfil confidentiality.
 
 - Security: The combination of a secret key and hash function makes it resistant to attacks such as brute-forcing and collision attacks.
 
-## What’s the Difference Between Diffie-Hellman and RSA?
+## What’s the difference between Diffie-Hellman and RSA?
 
 **Diffie-Hellman**
 
@@ -125,7 +125,7 @@ HMAC (Hash-Based Message Authentication Code) is a mechanism for verifying data 
 - Purpose: Used for both key exchange and encryption/decryption.
 - Asymmetric encryption system based on the difficulty of factoring large numbers.
 
-## If You’re Going to Compress and Encrypt a File, Which Do You Do First and Why?
+## If you're going to compress and encrypt a file, which one do you do first and why?
 
 - Compress first, then encrypt:
 - Reason: Compression reduces the file size by removing redundant data, making the encryption process more efficient. If you encrypt first, the data will be randomized, making it difficult to compress effectively.
