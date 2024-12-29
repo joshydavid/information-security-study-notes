@@ -90,7 +90,7 @@ Each layer in the OSI model adds specific headers to a packet:
 
 ## How does a packet travel between two hosts connected in the same network?
 
-In the same netowrk, a packet is sent directly to the destination host's MAC address without the need for routing (only for different network). The sender's device sends the packet with the destination MAC address obtained from the ARP table.
+In the same network, a packet is sent directly to the destination host's MAC address without the need for routing (only for different network). The sender's device sends the packet with the destination MAC address obtained from the ARP table.
 
 ## Explain the difference between TCP and UDP
 

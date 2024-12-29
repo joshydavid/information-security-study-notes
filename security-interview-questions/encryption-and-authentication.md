@@ -8,7 +8,7 @@ A three-way handshake is the process used to establish a TCP connection between 
 The client sends a `SYNC` packet to the server to initiate the connection.
 
 **Step 2**
-ver responds with a `SYNC-ACK` packet, which confirms the client's request indicate readiness to communicate.
+The server responds with a `SYNC-ACK` packet, which confirms the client's request indicate readiness to communicate.
 
 **Step 3**
 The client sends an `ACK` package to the server, completing the handshake and establishing the connection.
@@ -127,7 +127,7 @@ HMAC (Hash-Based Message Authentication Code) is a mechanism for verifying data 
 
 ## If you're going to compress and encrypt a file, which one do you do first and why?
 
-- Compress first, then encrypt:
+- Compress first, then encrypt.
 - Reason: Compression reduces the file size by removing redundant data, making the encryption process more efficient. If you encrypt first, the data will be randomized, making it difficult to compress effectively.
 
 ## How do I authenticate you and know you sent the message?
