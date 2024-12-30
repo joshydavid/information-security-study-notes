@@ -29,7 +29,7 @@ HTTPS is used to securely transmit data on the web (e.g., login credentials, pay
 
 ## What is the difference between HTTPS and SSL?
 
-HTTPS is a protocol for secure communication over a network, while SSL (Secure Sockets Layer) is a cryptographic protocol that was used to provide encryption.
+HTTPS is a protocol for secure communication over a network, while SSL (Secure Sockets Layer) is a cryptographic protocol that is used to provide encryption.
 
 SSL has been replaced by TLS (Transport Layer Security), which is a more secure and efficient version.
 

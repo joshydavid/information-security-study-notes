@@ -16,19 +16,19 @@ A **web application** is a software application that runs on a web server and in
 
 ## Different Types of Servers
 
-1. **Web Server**:
+1. **Web Server**
 
    - Hosts the web pages of a web application and serves HTTP requests. Example: Apache, Nginx.
 
-2. **App Server**:
+2. **App Server**
 
    - Runs the application logic, often processing dynamic content. It can be separate from the web server. Example: Tomcat, Node.js.
 
-3. **File Server**:
+3. **File Server**
 
    - Provides storage and access to files, serving them to clients. Example: Samba, FTP server.
 
-4. **DB Server**:
+4. **DB Server**
    - Hosts databases and manages requests for reading and writing data. Example: MySQL, PostgreSQL.
 
 ## OWASP Top 10
@@ -48,27 +48,27 @@ The **OWASP Top 10** is a list of the ten most critical web application security
 
 ## Injection Attacks
 
-1. **SQL Injection**:
+1. **SQL Injection**
 
    - Malicious SQL code inserted into a web application's query, compromising the database.
 
-2. **LDAP Injection**:
+2. **LDAP Injection**
 
    - Injecting malicious LDAP queries, potentially bypassing authentication or accessing unauthorized data.
 
-3. **NoSQL Injection**:
+3. **NoSQL Injection**
 
    - Attacks on NoSQL databases by injecting malicious code into queries. Example: MongoDB.
 
-4. **Blind SQL Injection**:
+4. **Blind SQL Injection**
 
    - A variant of SQL Injection where the attacker doesn't see the output but can infer information by sending payloads and observing server responses.
 
-5. **XML Injection**:
+5. **XML Injection**
 
    - Manipulating XML data to exploit vulnerabilities in the processing of XML data.
 
-6. **URL Injection**:
+6. **URL Injection**
    - Manipulating URL parameters to inject malicious data or bypass security measures.
 
 ## Broken Authentication and Session Management
@@ -100,22 +100,22 @@ The **OWASP Top 10** is a list of the ten most critical web application security
 
 ## Cross-Site Scripting (XSS)
 
-1. **Stored XSS**:
+1. **Stored XSS**
 
    - Malicious scripts are stored on the server and then served to all users who visit a vulnerable page.
 
-2. **Reflected XSS**:
+2. **Reflected XSS**
 
    - Malicious scripts are reflected off the web server and executed on a user’s browser when they click a specially crafted link.
 
-3. **DOM-based XSS**:
+3. **DOM-based XSS**
    - The vulnerability exists in the client-side code, typically JavaScript, which modifies the DOM and executes malicious scripts.
 
 ## CSRF (Cross-Site Request Forgery)
 
 - **CSRF** attacks trick a user into executing unwanted actions on a web application where they are authenticated. This can lead to actions like transferring funds or changing account settings without the user's consent.
 
-  - **SSRF (Server-Side Request Forgery)**:
+  - **SSRF (Server-Side Request Forgery)**
     - A type of attack where the attacker sends a request to an internal server, usually bypassing firewalls or other security controls.
 
 ## Insecure Deserialization
@@ -128,20 +128,20 @@ The **OWASP Top 10** is a list of the ten most critical web application security
 
 ## Threat Modeling
 
-1. **STRIDE**:
+1. **STRIDE**
 
    - A threat modeling framework to identify potential threats: **Spoofing**, **Tampering**, **Repudiation**, **Information Disclosure**, **Denial of Service**, and **Elevation of Privilege**.
 
-2. **DREAD**:
+2. **DREAD**
    - A threat rating model used to assess risk: **Damage**, **Reproducibility**, **Exploitability**, **Affected Users**, and **Discoverability**.
 
 ## SAST and DAST
 
-1. **SAST (Static Application Security Testing)**:
+1. **SAST (Static Application Security Testing)**
 
    - Analyzes the source code of an application to find vulnerabilities before it’s run (at rest).
 
-2. **DAST (Dynamic Application Security Testing)**:
+2. **DAST (Dynamic Application Security Testing)**
    - Analyzes the application during runtime to detect vulnerabilities that could be exploited while the application is active.
 
 ## What’s a WAF (Web Application Firewall)?
@@ -150,47 +150,47 @@ The **OWASP Top 10** is a list of the ten most critical web application security
 
 ## Reverse and Forward Proxy
 
-1. **Forward Proxy**:
+1. **Forward Proxy**
 
    - Sits between the client and the internet, forwarding requests from clients to the server and vice versa. It hides the client's identity.
 
-2. **Reverse Proxy**:
+2. **Reverse Proxy**
    - Sits between the client and the server and forwards requests to backend servers. It often performs load balancing, caching, and security functions.
 
 ## HTTP Security Headers
 
-1. **HSTS (HTTP Strict Transport Security)**:
+1. **HSTS (HTTP Strict Transport Security)**
 
    - Instructs browsers to only communicate with the server over HTTPS, preventing man-in-the-middle attacks.
 
-2. **Cache-Control: no-cache**:
+2. **Cache-Control: no-cache**
 
    - Prevents the browser from caching sensitive data, ensuring that fresh data is retrieved on each request.
 
-3. **Content Security Policy (CSP)**:
+3. **Content Security Policy (CSP)**
 
    - Mitigates XSS risks by specifying which dynamic resources are allowed to load on the webpage.
 
-4. **CORS (Cross-Origin Resource Sharing)**:
+4. **CORS (Cross-Origin Resource Sharing)**
 
    - Defines which external domains are allowed to access resources from the server, preventing unauthorized cross-origin requests.
 
-5. **X-Frame-Options**:
+5. **X-Frame-Options**
 
    - Prevents the page from being embedded in a frame or iframe, helping protect against clickjacking attacks.
 
-6. **X-XSS-Protection**:
+6. **X-XSS-Protection**
 
    - Enables the browser’s built-in protection against reflected XSS attacks.
 
-7. **Access-Control-Allow-Origin**:
+7. **Access-Control-Allow-Origin**
    - Specifies which domains are allowed to make cross-origin requests to the server.
 
 ## Code Vulnerability: Weak vs Strong Code
 
-- **Weak Code**:
+- **Weak Code**
 
   - Contains poor security practices, such as hardcoded credentials, improper error handling, and lack of input validation. It is prone to exploitation.
 
-- **Strong Code**:
+- **Strong Code**
   - Follows secure coding practices, such as input validation, proper error handling, using encryption, and ensuring that data is sanitized before processing.

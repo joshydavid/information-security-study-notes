@@ -92,12 +92,12 @@
 
 ## Hashing Attacks
 
-1. **Collision Attack**:
+1. **Collision Attack**
 
    - **One-way**: Finding two distinct messages that result in the same hash.
    - **Two-way**: Finding a message that hashes to a specific target value.
 
-2. **Pre-image Attack**:
+2. **Pre-image Attack**
    - Finding a message that produces a specific hash value.
 
 ## Digital Signature
