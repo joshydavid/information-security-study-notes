@@ -26,7 +26,7 @@
 3. **SSO (Single Sign-On)**:
    - A method of authentication that allows users to access multiple applications with a single login session. After logging in once, the user can seamlessly access other authorized applications without re-entering credentials.
 
-## OAUTH
+## OAuth
 
 - **OAuth** (Open Authorization) is an authorization framework that allows third-party applications to access a user's resources without sharing their credentials. It uses tokens to grant access to protected resources. OAuth is commonly used in scenarios where an application needs to access data on behalf of the user, such as granting access to a Google account for a third-party app.
 

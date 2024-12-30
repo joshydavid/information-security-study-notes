@@ -59,10 +59,6 @@
 5. **Side Channel Attacks**: Attacks that exploit physical leaks during the encryption process (e.g., timing or power consumption).
 6. **Replay Attacks**: The attacker intercepts and retransmits valid messages to deceive the system.
 
-## Perfect Forward Secrecy
-
-- A property of cryptographic systems that ensures session keys are not compromised even if the server's private key is later exposed.
-
 ## Confusion and Diffusion (Avalanche Effect)
 
 - **Confusion**: Ensures that the relationship between plaintext and ciphertext is complex and non-linear.
@@ -124,17 +120,6 @@
 - **Signing**: The sender signs the message with their private key to ensure authenticity.
 - **Verification**: The recipient verifies the message using the sender’s public key to ensure it hasn’t been tampered with.
 
-## Concepts
-
-1. **Sign and Encrypt vs Encrypt and Sign**:
-
-   - **Sign and Encrypt**: First, sign the data (for authenticity), then encrypt (for confidentiality).
-   - **Encrypt and Sign**: First, encrypt the data (for confidentiality), then sign (for authenticity).
-
-2. **Compress-then-encrypt vs Encrypt-then-compress**:
-   - **Compress-then-encrypt**: Compress data before encryption. Vulnerable to certain attacks.
-   - **Encrypt-then-compress**: Encrypt data before compression. Safer and more commonly used.
-
 ## DSA and ECDSA
 
 - **DSA (Digital Signature Algorithm)**: A standard for creating digital signatures.
@@ -151,7 +136,7 @@
 - **FPE**: Encrypts data while preserving its original format.
 - **SST**: Replaces sensitive data with a token that retains the original format and length.
 
-### Is it Different from Masking?
+### Is it different from masking?
 
 - **Masking**: Hides part of data (e.g., showing only the last four digits of a credit card), while tokenization replaces it entirely.
 
@@ -167,7 +152,9 @@
 
 - A key derivation function designed to enhance password security by applying multiple iterations of a cryptographic hash function.
 
-# PKI (Public Key Infrastructure)
+## PKI (Public Key Infrastructure)
+
+Public Key Infrastructure (PKI) is a framework that manages digital keys and certificates to enable secure communication and authentication over a network. PKI uses asymmetric cryptography (public and private key pairs) to ensure the confidentiality, integrity, authenticity, and non-repudiation of data exchanged between entities.
 
 ## Digital Certificate
 
@@ -214,10 +201,6 @@ A **digital certificate** is a cryptographic document used to verify the identit
 
 - **Server Certificate**: Used to authenticate the server to the client.
 - **Client Certificate**: Used to authenticate the client to the server.
-
-### Which Key is Used for Signing a Certificate?
-
-The CA signs the certificate with its **private key** to ensure the authenticity, integrity, and non-repudiation of the digital certificate.
 
 ### Different CAs and Models
 
