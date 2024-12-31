@@ -99,6 +99,26 @@ Defense is hard, as long as we keep the key secret. Good-enough security is good
 
 Best of both world - envelope encryption.
 
+## How does RSA work?
+
+RSA is an asymmetric cryptographic algorithm used for encryption, decryption and digital signatures. It is based on the mathematical difficulty of factoring large prime numbers. RSA uses two keys, a public key for encryption and a private key for decryption.
+
+### Step 1. Key Generation
+
+The first step is to generate a public-private key pair. Select two large, random prime numbers `p` and `q` and ensure they are kept secret. Compute the modulus `n`, `n = p x q` `n` is the modulus used in both the public and private keys. The size of n determines the strength of the RSA encryption, and it's commonly agreed that if `n` is large enough, it is secure.
+
+### Step 2. Key Pair
+
+The public key is shared openly and used for encryption but the private key is kept secret and used for decryption.
+
+### Step 3. Encryption
+
+To encrypt a message, the sender uses the recipient's public key
+
+### Step 4. Decryption
+
+The recipient uses their private key to decrypt the ciphertext.
+
 ## MAC (Message Authentication Code)
 
 A MAC is a cryptographic technique that ensures **data integrity and authenticity** by combining a secret key with the input message to generate a code. It’s commonly used in secure communications (e.g., HTTPS, TLS).
@@ -195,6 +215,32 @@ RSA key exchange process
 ## Explain the concept of least privilege and why it’s important in information security
 
 The principle of least privilege means granting users and systems only the minimum level of access needed for them to complete their tasks, this minimizes the risk of accidental or malicious damage to sensitive information
+
+## Elliptic Curve Cryptography (ECC)
+
+In Elliptic Curve Cryptography (ECC), key exchange algorithms allow two parties to securely exchange cryptographic keys over an untrusted network. The most widely used ECC-based key exchange protocol is ECDH (Elliptic Curve Diffie-Hellman).
+
+### Step 1: Key Generation
+
+- Each party generates their own private key (random number):
+  - Alice generates a private key a and a corresponding public key A
+  - Bob generates a private key b and a corresponding public key B
+
+### Step 2: Public Key Exchange
+
+- Alice and Bob exchange their public keys A and B over the insecure channel.
+- The public keys are based on elliptic curve points.
+
+### Step 3: Shared Secret Calculation
+
+- Both Alice and Bob now compute the shared secret using their private key and the other party’s public key:
+- Alice computes the shared secret using her private key and Bob’s public key.
+- Bob computes the shared secret using his private key and Alice’s public key.
+- Because of the properties of elliptic curves, the shared secret will be identical.
+
+### Step 4: Secure Communication
+
+- The shared secret can now be used as a symmetric key to encrypt/decrypt messages between Alice and Bob, ensuring secure communication.
 
 ## What is authentication?
 
@@ -388,6 +434,28 @@ MD5 (Message Digest Algorithm 5) was once widely used but is now considered inse
   - MD5’s Merkle-Damgård construction allows attackers to append data to a hash and compute a new hash without knowing the original input.
 - Deprecated:
   - MD5 is no longer considered secure for cryptographic purposes and has been replaced by more robust algorithms like SHA-2 and SHA-3.
+
+## How do passkeys work?
+
+**Key Pair Generation**
+
+- iPhone 16 Pro, or any device generates a key pair: a public and private key
+  - The public key is shared with the service (a website/app)
+  - The private key is securely stored on the device and never leaves it. (Secure Enclave on iPhone)
+
+**Authentication Process**
+
+- When you attempt to log in to a service,
+  - the service sends a challenge (random string) to your device,
+  - the device uses the private key stored on the Secure Enclave to sign the challenge
+  - the signed challenge is sent back to the service
+  - the service verifies the signed challenge using the public key that was shared at the registration phase
+
+**Why is it better?**
+
+- Phishing resistant, no password to type or share and attackers can't steal.
+- Theft prevention, even if the service is breached, the attacker only gets the public key which is publicly available and useless without the private key
+- No reuse issue, passkeys are unique to each service, no need to worry about reusing the same ones.
 
 ## Scenario 1 - Symmetric Encryption in Secure File Storage
 
