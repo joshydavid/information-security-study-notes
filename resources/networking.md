@@ -66,6 +66,20 @@ The internet is a giant network that consists of many small networks within itse
 - Can be spoofed - ARP poisoning
 - Networked device pretends to identify as another using its MAC address
 
+## Switch vs Router
+
+### Switch
+
+- Operates within a local area network (LAN)
+- Main job is to connect devices (computers, printers, servers) in a LAN and enable them to communicate
+- Forwards data between devices based on their **MAC addresses**
+
+### Router
+
+- Connects **different networks** together, such as a home network to the internet
+- Forwards data between networks based on **IP addresses**
+- Consists of other additional features such as NAT, firewall etc
+
 ## What is IPSec and why is it important?
 
 IPSec (Internet Protocol Security) is a framework of protocols used to secure communications over IP networks by providing confidentiality, integrity, and authentication. It ensures that data traveling across a network (e.g., the internet) is encrypted and protected from tampering or unauthorized access.
