@@ -122,6 +122,20 @@ Malicious or negligent insiders misuse their access to systems or data.
   - Enforce role-based access controls (RBAC).
   - Conduct regular security audits.
 
+## How would you respond if your site is being targetted by a DDoS attack?
+
+DDoS attack impacts the availability of a service, it's important to identify and mitigate the attack to ensure minimal disruptions to users.
+
+Use networking monitor tools such as IDS to detect unusual traffic patterns for example sudden spike in requests/traffics from a specific geographic location or IP range.
+
+Next is to identify the type of DDoS attack - volume-based attack like UDP floods, protocol attack like SYN flood or application layer attack like HTTP flood as understanding the attack will help in applying the appropriate mitigation techniques.
+
+To mitigate the attack, I would start with rate-limiting or throttling requests to prevent overloading the servers. I’d use a Web Application Firewall (WAF) to filter malicious traffic and block suspicious IPs or regions if needed. If the attack is large-scale, I’d involve a Content Delivery Network (CDN) to absorb traffic and prevent overload on my infrastructure. Additionally, I’d enable IP blacklisting or geo-blocking to reduce the attack surface.
+
+During the attack, I would keep the internal teams informed—working closely with the network security team, DevOps, and customer service. If necessary, I’d notify users and customers about the situation, providing updates on the resolution process.
+
+After the attack, I would conduct a post-mortem analysis to understand how the attack occurred and what could have been done differently. This would include reviewing traffic logs, adjusting WAF rules, and strengthening our DDoS defenses to better prepare for future attacks.
+
 ## How would you defend against a DDoS attack?
 
 Distributed Denial of Service (DDoS) attacks overwhelm a network or service with excessive traffic to cause disruptions. To defend against a DDoS attack:

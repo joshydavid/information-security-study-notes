@@ -1,7 +1,7 @@
 class Solution:
     def dailyTemperatures(self, temperatures):
         """
-        - https://leetcode.com/problems/daily-temperatures/description/?envType=problem-list-v2&envId=e0vhspyt
+        - https://leetcode.com/problems/daily-temperatures/
         - can the input be null?
         """
 
