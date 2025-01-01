@@ -15,25 +15,23 @@ class Solution:
                 continue
 
             # pointers
-            j = i + 1
-            k = len(nums) - 1
+            left, right = i + 1, len(nums) - 1
 
-            # 2 pointers
-            while j < k:
-                total = nums[i] + nums[j] + nums[k]
+            while left < right:
+                total = nums[i] + nums[left] + nums[right]
 
                 if total < 0:
-                    j += 1
+                    left += 1
                 elif total > 0:
-                    k -= 1
+                    right -= 1
                 else:
-                    solution = [nums[i], nums[j], nums[k]]
+                    solution = [nums[i], nums[left], nums[right]]
                     result.append(solution)
-                    j += 1
+                    left += 1
 
                     # skip duplicate after finding triplets
-                    while j < k and nums[j] == nums[j - 1]:
-                        j += 1
+                    while left < right and nums[left] == nums[left - 1]:
+                        left += 1
 
         return result
 

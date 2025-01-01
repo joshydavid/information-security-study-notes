@@ -33,7 +33,7 @@
 - **OFB (Output Feedback)**: A mode that uses previous ciphertext for encryption, turning a block cipher into a stream cipher.
 - **CFB (Cipher Feedback)**: Similar to OFB but uses feedback in a different way, making it more secure than ECB.
 
-  **Which is Safer?**
+  **Which is safer?**
 
   - **CBC** is safer than **ECB**, as it prevents ciphertext patterns and improves security.
 
@@ -242,6 +242,33 @@ S/MIME is a standard for public key encryption and signing of MIME data, which i
 4. **Authentication and Pre-Master Secret**: Server authenticates with its certificate, and both parties generate the session key.
 5. **Session Key Creation**: Both parties create a symmetric session key.
 6. **Finished Messages**: Both client and server send encrypted "Finished" messages to confirm the handshake.
+
+## How is RSA used in standalone encryption (like Alice encrypting a symmetric key for Bob) vs its role in the SSL/TLS handshake?
+
+### Standalone RSA Encryption (Alice to Bob)
+
+- Alice generates a symmetric key (e.g., for AES) that she’ll use to encrypt her messages to Bob.
+- Alice encrypts the symmetric key using Bob’s public key (RSA) and sends the encrypted key to Bob.
+- Bob decrypts the symmetric key using his private key.
+
+Alice generates the symmetric key on her own, and RSA is only used for securely transmitting this key. There’s no negotiation or shared responsibility between Alice and Bob for generating the key.
+
+### SSL/TLS Handshake and the Pre-Master Secret
+
+In SSL/TLS, the goal is to establish a shared symmetric session key between the client (e.g., Alice) and the server (e.g., Bob) to securely encrypt their communication.
+
+**Why the pre-master secret?**
+
+- The “pre-master secret” is a randomly generated value that both the client and server use to derive the final session key.
+- This value ensures that the session key is agreed upon securely and uniquely for each session.
+- The client (Alice) generates the pre-master secret and encrypts it using the server’s (Bob’s) public key.
+- The server decrypts the pre-master secret using its private key.
+- Both the client and the server use the pre-master secret, along with some additional information (e.g., client and server random values), to derive the final symmetric session key.
+
+### TLDR
+
+- In standalone RSA (Alice to Bob), Alice decides the symmetric key unilaterally and simply transmits it to Bob securely.
+- In SSL/TLS, the pre-master secret is part of a larger key agreement protocol, where the client and server contribute to the process of generating the session key
 
 ## Java Key Stores (JKS) and Trust Store
 
