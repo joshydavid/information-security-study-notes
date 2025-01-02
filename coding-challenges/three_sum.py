@@ -14,7 +14,7 @@ class Solution:
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
-            # pointers
+            # 2 pointers
             left, right = i + 1, len(nums) - 1
 
             while left < right:

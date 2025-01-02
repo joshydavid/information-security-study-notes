@@ -4,7 +4,7 @@
 
 TCP (Transmission Control Protocol) is a connection-oriented protocol that ensures reliable and ordered delivery of data. UDP (User Datagram Protocol), on the other hand is a connectionless protocol that priorizes speed and efficiency. TCP is suitable for applications requiring data delivery such as web browsing (HTTPS) while UDP is preferred for real-time applications such as live streaming or online gaming.
 
-## Describe the process of subnetting and its signifiance in network design
+## Describe the process of subnetting and its significance in network design
 
 Subnetting involves dividing a larger network into smaller sub-networks. It enhances network performance, minimises broadcast traffic, and optimise IP address allocation. By assigning unique subnets to different departments or funcitons, it promotes organisation and efficient use of IP addresses.
 

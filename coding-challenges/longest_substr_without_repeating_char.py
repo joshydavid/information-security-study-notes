@@ -14,7 +14,8 @@ class Solution:
                 charSet.remove(s[l])
                 l += 1
 
-            longest = max(longest, r - l + 1)
+            length = r - l + 1
+            longest = max(longest, length)
             charSet.add(s[r])
 
         return longest

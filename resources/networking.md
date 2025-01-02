@@ -10,10 +10,16 @@ The internet is a giant network that consists of many small networks within itse
 
 **Commonly Used Protocols**
 
-- TCP: ensures reliable data transmission (web browsing, email) [Reliability > Speed]
-- UDP: provides faster, communication for applications like live streaming or gaming, packets may be lost. [Speed > Reliability]
+- TCP: connection-oriented, ensures reliable data transmission (web browsing, email) [Reliability > Speed]
+- UDP: connectionless, provides faster, communication for applications like live streaming or gaming, packets may be lost. [Speed > Reliability]
 
 ![Internet](./images/networking/internet.png)
+
+## Internet vs Intranet vs Extranet
+
+- The Internet is a global network that connects millions of private, public, academic, business, and government networks worldwide. It allows access to information and services on a large scale. (Public)
+- An Intranet is a private network used within an organization to securely share resources, communicate, and collaborate among employees. (private)
+- An Extranet is an extended Intranet that allows limited access to external users, such as vendors, partners, or customers, while maintaining a secure connection.
 
 ## Identifying Devices on a Network
 
@@ -29,7 +35,8 @@ The internet is a giant network that consists of many small networks within itse
 
 ### IP Address
 
-- Identify a host on a network
+- Used for communication across different networks
+- Identify a host on a network, operates at Layer 3 of the OSI model
 - Made up of 4 octets, between the range of 0 and 255 (inclusive)
 - Mutable
 - Public address -> identify devices on the internet
@@ -59,6 +66,9 @@ The internet is a giant network that consists of many small networks within itse
 
 ### MAC Address
 
+- Hardware identifier, operates at Layer 2 of the OSI model
+- Used for communication within a local network
+- Not used for routing, works only within the same local network
 - Found in device's motherboard
 - Assigned a unique address at the factory (MAC)
 - 12 character hexadecimal number
@@ -87,6 +97,51 @@ IPSec (Internet Protocol Security) is a framework of protocols used to secure co
 IPSec operates at the Network Layer (Layer 3) of the OSI model, making it versatile for securing any type of IP traffic.
 
 Networking methods are not encrypted by default. Networking protocols such as TCP/IP are only concerned with connection and delivery, and messages sent are not concealed - which means that anyone in the middle can read them. IPSec and other protocols encrypt these data, keeping it secure.
+
+## What is ARP?
+
+ARP (Address Resolution Protocol) is a network protocol used to map an IP address to a corresponding MAC address within a local network. It operates at the Data Link Layer (Layer 2) of the OSI model.
+
+### Why ARP Is Needed
+
+- Devices communicate over networks using IP addresses (logical addresses).
+- However, at the hardware level, communication is based on MAC addresses (physical addresses).
+- ARP resolves the gap by linking the logical IP address to the physical MAC address.
+
+### How ARP Works
+
+When a device wants to communicate with another device in the same local network:
+
+1. Device sends an ARP request:
+   - The device broadcasts a message to the local network, asking:
+     “Who has IP address X.X.X.X? Tell me your MAC address.”
+   - The ARP request is sent to all devices in the network (broadcast: MAC address FF:FF:FF:FF:FF:FF).
+2. Target device responds with ARP reply:
+   - The device with the requested IP address replies directly to the sender with its MAC address.
+3. Mapping is stored in ARP cache:
+   - The sender stores the IP-to-MAC mapping in its ARP cache (a table) to avoid sending repeated ARP requests for future communication.
+
+### ARP in Action
+
+Example: Device A wants to communicate with Device B (in the same network)
+
+- Device A: IP = 192.168.1.10, MAC = 00:1A:2B:3C:4D:5E
+- Device B: IP = 192.168.1.20, MAC = 11:22:33:44:55:66
+
+1. Device A sends an ARP request:
+   “Who has IP 192.168.1.20? Tell me your MAC address.”
+2. Device B responds with an ARP reply:
+   “I have IP 192.168.1.20. My MAC address is 11:22:33:44:55:66.”
+3. Device A stores this information in its ARP cache.
+
+### When ARP is Used
+
+1. Local Communication:
+   - ARP is used only within the same local network (subnet).
+   - For communication across different networks, the default gateway (router) handles the process.
+2. Examples:
+   - Your computer uses ARP to find the MAC address of your home router when accessing the Internet.
+   - Devices in a LAN use ARP to find each other for file sharing or local services.
 
 ## What is ARP poisoning?
 

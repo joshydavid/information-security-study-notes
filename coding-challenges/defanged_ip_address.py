@@ -6,13 +6,13 @@ class Solution:
         - is the input always a valid IPv4 address?
         """
 
-        period = "."
-        newChar = "[.]"
+        PERIOD = "."
+        NEW_CHAR = "[.]"
         defangedIP = []
 
         for ch in address:
-            if ch == period:
-                defangedIP.append(newChar)
+            if ch == PERIOD:
+                defangedIP.append(NEW_CHAR)
             else:
                 defangedIP.append(ch)
 

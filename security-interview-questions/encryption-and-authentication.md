@@ -36,7 +36,7 @@ A session is a server-side data structure used to store information about a user
 OAuth is an authorisation protocol that allows third-party applications to accept user data without exposing the user's credentials.
 
 - The user is redirected to an authorization server where they grant access to their data
-- The server redirects the user back to the client application iwth an authorization code.
+- The server redirects the user back to the client application with an authorization code.
 - The client application exchanges the authorization code for an access token.
 - The client uses the access token to make API requests on behalf of the user.
 
