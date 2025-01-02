@@ -30,7 +30,7 @@ Wireless network security involves encryption, authentication mechanisms and acc
 
 ## Explain the concept of VPN and its applications in remote access and secure communications
 
-VPNs establish secure, encrypted connections over the internet, providing a private networ kexperience for remote users. They ensure confidentiality, and integrity of data during transmission, making them essential for secure remote access and interconnecting geographically distrubuted networks.
+VPNs establish secure, encrypted connections over the internet, providing a private network experience for remote users. They ensure confidentiality, and integrity of data during transmission, making them essential for secure remote access and interconnecting geographically distrubuted networks.
 
 ## What is the role of firewalls in network security, and how do stateful and stateless firewalls differ?
 
