@@ -43,24 +43,70 @@ E.g.
 
 ### Social Engineering
 
-An attacker manipulates individuals into giving up sensitive information or performing actions.
+Social engineering attacks involve manipulating people into revealing sensitive information or performing actions that can compromise security. These attacks often exploit human psychology rather than technical vulnerabilities.
 
-- E.g. Pretending to be IT support to gain passwords over a phone call.
-- Mitigation:
-  - Conduct security awareness training.
-  - Implement strict verification protocols.
-  - Use MFA to reduce the impact of compromised credentials.
+**Common Types of Social Engineering Attacks**
 
-### Phishing
+- Phishing
 
-An attacker tricks individuals into revealing sensitive information, such as passwords or financial data, by masquerading as a trusted entity.
+  - A type of attack where attackers impersonate legitimate organizations or individuals to trick victims into revealing personal information, such as usernames, passwords, or credit card details.
+  - Common Methods:
+    - Fake emails or websites that look like those from banks, social media platforms, or tech companies.
+    - Malicious links or attachments that install malware.
 
-- E.g. Fake emails or websites resembling legitimate ones to steal credentials, an email claiming to be from a bank, requesting the recipient to provide their login credentials by clicking a link that leads to a fake website.
+- Spear Phishing
 
-- Mitigation:
-  - Implement email filtering and anti-phishing tools.
-  - Train employees to recognize phishing attempts.
-  - Use Multi-Factor Authentication (MFA) to protect accounts.
+  - A more targeted form of phishing. Attackers customize the message to a specific individual or organization, often using information gathered from social media or other sources to make the message seem more legitimate.
+  - Example: An attacker might send an email that appears to come from a trusted colleague, asking the victim to click on a link or download an attachment.
+
+- Vishing (Voice Phishing)
+
+  - Involves phone calls where attackers impersonate legitimate entities (e.g., banks, government agencies, or technical support) to extract sensitive information.
+  - Common Tactics:
+    - Automated robocalls asking for credit card information.
+    - Fraudulent calls that claim the victim’s account has been compromised and ask them to provide personal information to “resolve” the issue.
+
+- Smishing (SMS Phishing)
+
+  - A type of phishing where attackers use text messages (SMS) to trick victims into clicking on malicious links or providing personal information.
+  - Example: A text message claiming to be from a bank, asking the victim to log in to a fake website using a provided link.
+
+- Pretexting
+
+  - The attacker creates a fabricated story or pretext to obtain information from the victim. This often involves impersonating someone who has a legitimate reason to request information (e.g., a co-worker, law enforcement, or a contractor).
+  - Example: A hacker might pose as an IT technician calling to “fix” an issue on your computer, asking you for your username and password.
+
+- Baiting
+
+  - In this attack, the attacker offers something enticing to the victim, such as free software, gifts, or media files, to persuade them to download malware or provide personal information.
+  - Example: A USB drive left in a public place with a label like “Confidential – Do Not Open” to tempt someone into plugging it into their computer, which could install malware.
+
+- Quizzes and Surveys
+
+  - Attackers use seemingly harmless quizzes or surveys to gather personal information that can be used for further attacks.
+  - Example: A Facebook quiz that asks for answers to security questions (e.g., “What was the name of your first pet?”).
+
+- Whaling
+
+  - A type of spear phishing targeting high-profile individuals, such as executives or key personnel in an organization, to steal sensitive corporate information or money.
+  - Example: An attacker might impersonate a company’s legal department or a trusted business partner to request wire transfers or access to private data.
+
+- Shoulder Surfing
+
+  - This involves directly observing someone’s sensitive information, such as passwords or PINs, by watching them type on a keyboard or viewing their screen.
+  - Example: An attacker may observe a person entering their password on a public computer or smartphone in a crowded place.
+
+- Tailgating
+  - Attackers gain unauthorized physical access to a restricted area by following an authorized person into the premises without their knowledge or consent.
+  - Example: An attacker might walk behind an employee into a secure building, using their access badge to slip past security.
+
+**Prevention**
+
+- Education and Awareness: Regularly train employees to recognise all the threats above
+- Two-factor Authentication (2FA): Implementing 2FA makes it more difficult for attackers to gain unauthorized access even if they obtain login credentials.
+- Verify Request: Always verify sensitive requests (like money transfers or confidential information) through a trusted channel, such as phone calls.
+- Limit Information Sharing: Be cautious about what personal or organizational information is shared publicly (on social media, websites, etc.), as attackers can use this data to craft convincing attacks.
+- Report Suspicious Activity: Encourage employees to report any suspicious emails, phone calls, or requests immediately.
 
 ### SQL Injection
 
@@ -126,15 +172,14 @@ Malicious or negligent insiders misuse their access to systems or data.
 
 DDoS attack impacts the availability of a service, it's important to identify and mitigate the attack to ensure minimal disruptions to users.
 
-Use networking monitor tools such as IDS to detect unusual traffic patterns for example sudden spike in requests/traffics from a specific geographic location or IP range.
-
-Next is to identify the type of DDoS attack - volume-based attack like UDP floods, protocol attack like SYN flood or application layer attack like HTTP flood as understanding the attack will help in applying the appropriate mitigation techniques.
-
-To mitigate the attack, I would start with rate-limiting or throttling requests to prevent overloading the servers. I’d use a Web Application Firewall (WAF) to filter malicious traffic and block suspicious IPs or regions if needed. If the attack is large-scale, I’d involve a Content Delivery Network (CDN) to absorb traffic and prevent overload on my infrastructure. Additionally, I’d enable IP blacklisting or geo-blocking to reduce the attack surface.
-
-During the attack, I would keep the internal teams informed—working closely with the network security team, DevOps, and customer service. If necessary, I’d notify users and customers about the situation, providing updates on the resolution process.
-
-After the attack, I would conduct a post-mortem analysis to understand how the attack occurred and what could have been done differently. This would include reviewing traffic logs, adjusting WAF rules, and strengthening our DDoS defenses to better prepare for future attacks.
+- Use networking monitor tools such as IDS to detect unusual traffic patterns for example sudden spike in requests/traffics from a specific geographic location or IP range.
+- Identify the type of DDoS attack - volume-based attack like UDP floods, protocol attack like SYN flood or application layer attack like HTTP flood as understanding the attack will help in applying the appropriate mitigation techniques.
+- Mitigate the attack by rate-limiting or throttling requests to prevent overloading the servers.
+- Use a Web Application Firewall (WAF) to filter malicious traffic and block suspicious IPs or regions if needed. (Layer 7)
+- Use Content Delivery Network (CDN) to absorb traffic and prevent overload on my infrastructure.
+- Enable IP blacklisting or geo-blocking to reduce the attack surface. (Layer 3/4, Network/Transport Layer)
+- Keep the internal teams informed—working closely with the network security team, DevOps, and customer service. If necessary, I’d notify users and customers about the situation, providing updates on the resolution process.
+- Once attack is cover, conduct a post-mortem analysis to understand how the attack occurred and what could have been done differently.
 
 ## How would you defend against a DDoS attack?
 
