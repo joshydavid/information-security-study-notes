@@ -41,6 +41,7 @@
 - Additional layer behind firewall, deployed directly in the path of network traffic
 - Active, does not require the intervention of the security team.
 - E.g Inline firewalls with IPS functionality
+- "Undercover security guard inside the building" (dynamic) while firewall is the security guard at the entrance (static - blocks based on pre-defined rules)
 
 ## Types of Intrusion Prevention System (IPS)
 

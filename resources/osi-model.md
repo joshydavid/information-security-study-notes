@@ -6,6 +6,87 @@
 
 ![OSI Model](./images/networking/osi_model.png)
 
+## How Data Flow in the OSI Model
+
+Sender: Layer 7 -> Layer 1
+
+### Application Layer (Layer 7)
+
+- This is where the communication begins.
+- It includes applications like web browsers, email clients, or any software that generates the data to be transmitted.
+- Data at this layer is called the **message**.
+- Example: You send an HTTPS `GET` request to fetch a webpage.
+
+### Presentation Layer (Layer 6)
+
+- This layer ensures that the data is in the correct format for the recipient.
+- It handles tasks like encryption, compression, or translation (e.g., converting text to binary).
+- Data remains a message at this stage.
+- Example: HTTPS encrypts the data here using SSL/TLS.
+
+### Session Layer (Layer 5)
+
+- This layer manages sessions or connections between two devices.
+- It establishes, maintains, and terminates communication sessions.
+- Data is still referred to as a message.
+- Example: It ensures the session between your web browser and the server remains active.
+
+### Transport Layer (Layer 4)
+
+- The transport layer ensures reliable delivery of data across the network.
+- Data is broken into smaller units called **segments** (for TCP) or **datagrams** (for UDP).
+- It adds a port number to identify the application (e.g., port 443 for HTTPS).
+- Example: The transport layer guarantees delivery using TCP or sends data quickly using UDP.
+
+### Network Layer (Layer 3)
+
+- This layer is responsible for routing the data to the correct destination.
+- It adds an IP header, which includes source and destination IP addresses.
+- The data is now called a **packet**.
+- Example: The packet contains the IP address of the web server you’re communicating with.
+
+### Data Link Layer (Layer 2)
+
+- This layer is responsible for communication between devices on the same local network (e.g., your computer and your router).
+- It adds a MAC address (source and destination) for communication within the same physical network.
+- The data is now called a frame.
+- Example: Your device’s MAC address is used to communicate with your router’s MAC address.
+
+### Physical Layer (Layer 1)
+
+- This is the final layer where data is transmitted as bits (binary: 0s and 1s) over the physical medium (e.g., Ethernet cables, Wi-Fi, fiber optics).
+- Example: The bits are sent as electrical signals, light pulses, or radio waves to reach the next device.
+
+Receiver: Layer 1 -> Layer 7
+
+### Physical (Layer 1)
+
+Signals are received and converted into bits.
+
+### Data Link (Layer 2)
+
+Data is extracted from the physical frames.
+
+### Network (Layer 3)
+
+Data is routed to the correct destination.
+
+### Transport (Layer 4)
+
+Segments are reassembled, and error correction is applied.
+
+### Session (Layer 5)
+
+The session is maintained.
+
+### Presentation (Layer 6)
+
+Data is decrypted and decompressed, if necessary.
+
+### Application (Layer 7)
+
+Data is presented to the user or application.
+
 ## Layer 7 - The Application Layer
 
 ![Layer 7](./images/networking/layer_7.png)
@@ -81,28 +162,6 @@ The data will then hit the sender’s transportation layer where it will be segm
 Once Ms. Palmer’s computer receives the bit stream through a physical medium (such as her wifi), the data will flow through the same series of layers on her device, but in the opposite order. First the physical layer will convert the bitstream from 1s and 0s into frames that get passed to the data link layer. The data link layer will then reassemble the frames into packets for the network layer. The network layer will then make segments out of the packets for the transport layer, which will reassemble the segments into one piece of data.
 
 The data will then flow into the receiver's session layer, which will pass the data along to the presentation layer and then end the communication session. The presentation layer will then remove the compression and pass the raw data up to the application layer. The application layer will then feed the human-readable data along to Ms. Palmer’s email software, which will allow her to read Mr. Cooper’s email on her laptop screen.
-
-## Data Flow
-
-Sender: Layer 7 -> Layer 1
-
-1. Application: Application creates data (e.g., sending an email).
-2. Presentation: Data is formatted, encrypted, or compressed.
-3. Session: The session between the sender and receiver is initiated.
-4. Transport: Data is segmented into smaller packets, and error-checking is performed (e.g., TCP ensures reliability).
-5. Network: The data packet is routed based on IP addresses.
-6. Data Link: The data packet is framed with physical addresses (MAC address) for local delivery.
-7. Physical: The data is transmitted as electrical signals or light pulses.
-
-Receiver: Layer 1 -> Layer 7
-
-1. Physical: Signals are received and converted into bits.
-2. Data Link: Data is extracted from the physical frames.
-3. Network: Data is routed to the correct destination.
-4. Transport: Segments are reassembled, and error correction is applied.
-5. Session: The session is maintained.
-6. Presentation: Data is decrypted and decompressed, if necessary.
-7. Application: Data is presented to the user or application.
 
 ### Information Security Context
 

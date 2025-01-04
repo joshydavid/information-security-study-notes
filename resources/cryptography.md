@@ -4,7 +4,7 @@
 
 Cryptography is the practice of using methods to secure sensitive data by transforming readable information, known as plaintext into an unreadable format called ciphertext - through a process called encryption. Only those with the decryption key can convert the ciphertext back into plaintext.
 
-The goal is to protect the confidentiality, integrity and availability of data, ensuring that it remains secure from unauthorized access or tampering whether during storage or transmission.
+The goal is to protect the confidentiality, integrity and authenticity of data, ensuring that it remains secure from unauthorized access or tampering whether during storage or transmission.
 
 ## Types of Cryptography
 
@@ -133,7 +133,7 @@ A MAC is a cryptographic technique that ensures **data integrity and authenticit
    - CMAC (Cipher-based MAC):
    - Based on symmetric encryption algorithms like AES.
    - Used when encryption and authentication are both required.
-3. Why Use a MAC?
+3. Why should we use MAC?
    - A plain hash function doesn’t provide authentication because anyone can compute the hash. A MAC ensures that only someone with the secret key can generate or verify the MAC, thus authenticating the message.
 
 ### How HMAC Ensures Integrity
