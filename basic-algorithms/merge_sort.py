@@ -4,6 +4,7 @@ class Solution:
         - https://leetcode.com/problems/sort-an-array/
         - can the input be empty?
         - does it only contain valid numbers?
+        - sort in ascending order/descending order?
         """
 
         # base case, already sorted

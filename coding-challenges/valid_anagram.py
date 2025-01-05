@@ -23,11 +23,7 @@ class Solution:
             else:
                 map_s[ch] -= 1
 
-        for value in map_s.values():
-            if value != 0:
-                return False
-
-        return True
+        return all(value == 0 for value in map_s.values())
 
 
 if __name__ == "__main__":

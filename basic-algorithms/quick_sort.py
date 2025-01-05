@@ -3,6 +3,7 @@ class Solution:
         """
         - can the input be empty?
         - does it only contain valid numbers?
+        - sort in ascending order/descending order?
         """
 
         if len(nums) <= 1:
