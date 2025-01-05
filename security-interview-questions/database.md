@@ -14,7 +14,7 @@
 
 **Network Security**
 
-- Only access the database on trusted netowrks, restrict access using firewalls by binding it to specific IP address.
+- Only access the database on trusted networks, restrict access using firewalls by binding it to specific IP address.
 - Disable remote access to the database unless necessary, and use VPNs for remote access
 
 **Auditing**

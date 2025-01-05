@@ -14,8 +14,8 @@ class Solution:
             return VALID_IPv4
         elif queryIP.count(":") == 7 and self.isValidIPv6(queryIP):
             return VALID_IPv6
-        else:
-            return NEITHER
+
+        return NEITHER
 
     def isValidIPv4(self, IP):
         """
