@@ -26,17 +26,17 @@ SELECT employees.name, departments.dept_name
 FROM employees
 JOIN departments ON employees.dept_id = departments.id;
 
--- LEFT JOIN: Returns all records from the left table (employees), and the matched records from the right table (departments); if no match, NULL values are returned for columns from the right table
+-- LEFT JOIN: Return all records from the left table (employees), and the matched records from the right table (departments); if no match, NULL values are returned for columns from the right table
 SELECT employees.name, departments.dept_name
 FROM employees
 LEFT JOIN departments ON employees.dept_id = departments.id;
 
--- RIGHT JOIN: Returns all records from the right table (departments), and the matched records from the left table (employees); if no match, NULL values are returned for columns from the left table
+-- RIGHT JOIN: Return all records from the right table (departments), and the matched records from the left table (employees); if no match, NULL values are returned for columns from the left table
 SELECT employees.name, departments.dept_name
 FROM employees
 RIGHT JOIN departments ON employees.dept_id = departments.id;
 
--- FULL OUTER JOIN: Returns all records when there is match in either left (employees) or right (departments) table; records without a match will have NULL values for the missing side
+-- FULL OUTER JOIN: Return all records when there is match in either left (employees) or right (departments) table; records without a match will have NULL values for the missing side
 SELECT employees.name, departments.dept_name
 FROM employees
 FULL OUTER JOIN departments ON employees.dept_id = departments.id;
@@ -50,13 +50,13 @@ SELECT department, COUNT(*)
 FROM employees
 GROUP BY department;
 
--- HAVING: Filters the results after GROUP BY
+-- HAVING: Filter the results after GROUP BY
 SELECT department, AVG(salary)
 FROM employees
 GROUP BY department
 HAVING AVG(salary) > 50000;
 
--- ORDER BY: Sorts the result
+-- ORDER BY: Sort the result
 SELECT *
 FROM employees
 ORDER BY salary DESC;

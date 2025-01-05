@@ -22,7 +22,7 @@
 ### ✅ Separation of Duties
 
 - No single point of control
-  - Physical world: user A wants access to the database, requires approval. Requestor != Approval
+- Physical world: user A wants access to the database, requires approval. Requestor != Approval
 
 ### ✅ Security By Design
 
@@ -124,7 +124,7 @@ Looks at the payload as well, not just the header. Open the envelope and look at
 
 - All softwares have bugs
 - % of those bugs will have security vulnerabilities
-- All softwares will ahve security vulnerabilities
+- All softwares will have security vulnerabilities
 
 ### Secure Coding
 
@@ -143,12 +143,12 @@ Looks at the payload as well, not just the header. Open the envelope and look at
 
 - SAST
 
-  - whitebox
+  - White box
   - Scans source code like SonarQube, Dependabot
   - Finds vulnerabilities earlier
 
 - DAST
-  - "black" box
+  - Black box
   - Obsourced source code, looks at the executable systems - after the coding phase
   - Finds vulnerabilities later
 
@@ -185,7 +185,7 @@ Primarily a log management and event correlation tool that helps with incident d
 
 - Recon
 - Mean time to identify (MTTI) ~200 days
-- Mean time to contain ((MTTC)) ~70 days
+- Mean time to contain (MTTC) ~70 days
 
 Ideally, be aware of the attack. If I can't prevent the attack, at least be aware of it sooner - via threat hunting.
 

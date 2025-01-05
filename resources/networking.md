@@ -102,7 +102,7 @@ Networking methods are not encrypted by default. Networking protocols such as TC
 
 ARP (Address Resolution Protocol) is a network protocol used to map an IP address to a corresponding MAC address within a local network. It operates at the Data Link Layer (Layer 2) of the OSI model.
 
-### Why ARP Is Needed
+### Purpose of ARP
 
 - Devices communicate over networks using IP addresses (logical addresses).
 - However, at the hardware level, communication is based on MAC addresses (physical addresses).
@@ -276,7 +276,7 @@ TLDR, speed > reliability - UDP, otherwise TCP.
 
 ## What is a firewall and how does it function in network security?
 
-- A firewall is a network security that monitors and control incoming/outgoing traffic based on pre-defined security rule.
+- A firewall is a network security device that monitors and control incoming/outgoing traffic based on pre-defined security rule.
 - Purpose
   - Block unauthorized access and ensure that only legit traffic can go through
   - Security Gate (IDS - Security Guard)

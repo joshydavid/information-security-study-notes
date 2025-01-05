@@ -33,7 +33,7 @@ Sender: Layer 7 -> Layer 1
 
 ### Transport Layer (Layer 4)
 
-- The transport layer ensures reliable delivery of data across the network.
+- The transport layer ensures end-to-end communication between two devices.
 - Data is broken into smaller units called **segments** (for TCP) or **datagrams** (for UDP).
 - It adds a port number to identify the application (e.g., port 443 for HTTPS).
 - Example: The transport layer guarantees delivery using TCP or sends data quickly using UDP.
