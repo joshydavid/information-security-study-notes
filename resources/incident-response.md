@@ -2,7 +2,9 @@
 
 ## What are the key elements of a security incident response plan?
 
-A security incident response plan outlines the steps an organization will take when a security breach or incident occurs. NIST 800-61 Incident Response Lifecycle:
+A security incident response plan outlines the steps an organization will take when a security breach or incident occurs.
+
+**NIST 800-61 Incident Response Lifecycle**
 
 - **Preparation**: Identifying assets, creating a response team, and setting up necessary tools (e.g., monitoring systems).
 - **Detection**: Monitoring for signs of a security incident and identifying it.

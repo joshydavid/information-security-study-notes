@@ -6,7 +6,7 @@
 - Does not block traffic (this is firewall)
 - Deployed parallel to network traffic, analyses a copy of the traffic and does not directly interact with it.
 - Passive, requires the intervention of the security team.
-- e.g SIEM system
+- Saves logs to SIEM system like Splunk.
 
 ## Types of Intrusion Detection System (IDS)
 
@@ -30,9 +30,7 @@
 
 ### Hybrid IDS
 
-- Combines the strengths of both network-based and host-based IDS
-- Example
-  - Security Information and Event Management (SIEM) like Splunk
+Combines the strengths of both network-based and host-based IDS
 
 ## Intrusion Prevention System (IPS)
 
@@ -49,8 +47,7 @@
 
 - Monitors traffic on a network
 - Positioned behind firewalls
-- Use case
-  - Detects and blocks exploits such as DDoS, worms, or unauthorized attempts
+- Use case -> detects and blocks exploits such as DDoS, worms, or unauthorized attempts
 
 ### Host-based IPS (HIPS)
 

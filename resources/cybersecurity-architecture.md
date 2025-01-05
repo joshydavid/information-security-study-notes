@@ -63,7 +63,7 @@ Designer, developer, adminstrator, user everyone is responsible.
 
 - It's an entry point for cyberattacks
 - Endpoints: devices that are connected to network
-- Hardware perspectives: Server, IOT, MacBook Pro, iPhone 16, router, switches
+- Hardware perspectives: Server, IOT, MacBook Pro, iPhone 16 Pro, router, switches
 - Software perspectives: iOS 18, macOS Sequoia
 
 ### Controls

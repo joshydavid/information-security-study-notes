@@ -2,18 +2,18 @@
 
 ## What is OWASP (Open Web Application Security Project)?
 
-- The OWASP Top 10 is a list of the most critical web application security risks, including issues like SQL injection, broken authentication, cross-site scripting (XSS), and more. It helps organizations identify and mitigate common vulnerabilities in web applications.
-- OWASP (Open Web Application Security Project) 2024
-  - Injection
-  - Broken Authentication
-  - Sensitive Data Exposure
-  - XML External Entities
-  - Broken Access Control
-  - Security Misconfiguration
-  - Cross-Site Scripting (XSS)
-  - Insecure Deserialization
-  - Using Components With Known Vulnerabilities
-  - Insufficient Logging And Monitoring
+The OWASP Top 10 is a list of the most critical web application security risks, including issues like SQL injection, broken authentication, cross-site scripting (XSS), and more. It helps organizations identify and mitigate common vulnerabilities in web applications.
+
+1. Injection
+2. Broken Authentication
+3. Sensitive Data Exposure
+4. XML External Entities (XXE)
+5. Broken Access Control
+6. Security Misconfiguration
+7. Cross-Site Scripting (XSS)
+8. Insecure Deserialization
+9. Using Components With Known Vulnerabilities
+10. Insufficient Logging And Monitoring
 
 ## What is SQL injection, and how can it be prevented?
 
@@ -97,10 +97,11 @@ CSRF attack will not be required if you can do XSS - stronger.
 
 During a vulnerability assessment of a web application, I discovered that the site was vulnerable to SQL injection attacks because user inputs weren’t properly sanitized. I immediately reported the issue to the development team. Together, we implemented input validation and used prepared statements in SQL queries to prevent injection attacks. Additionally, we ran further tests and updated the codebase to ensure the issue didn’t recur.
 
-- Key actions:
-  - Detection: Identifying the vulnerability through automated scans or manual testing.
-  - Mitigation: Collaborating with the team to implement a solution (in this case, sanitizing inputs and using secure coding practices).
-  - Follow-up: Verifying that the vulnerability was effectively addressed and adding further layers of security.
+**Key Actions**
+
+- Detection: Identifying the vulnerability through automated scans or manual testing.
+- Mitigation: Collaborating with the team to implement a solution (in this case, sanitizing inputs and using secure coding practices).
+- Follow-up: Verifying that the vulnerability was effectively addressed and adding further layers of security.
 
 ## What are the best practices for securely storing passwords?
 
@@ -181,56 +182,55 @@ Write software in a way that protects against security vulnerabilities and ensur
 
 **Cross-Site Scripting (XSS) Attack**
 
-Scenario: A user submits a comment on a blog page, and the content is displayed without any validation or sanitization. The comment includes a malicious script that, when viewed by other users, sends their session cookies to an attacker’s server.
+A user submits a comment on a blog page, and the content is displayed without any validation or sanitization. The comment includes a malicious script that, when viewed by other users, sends their session cookies to an attacker’s server.
 Question: How would you prevent this type of attack?
 
-Answer Focus: Explain input sanitization (e.g., using libraries like OWASP Java HTML Sanitizer), Content Security Policy (CSP), and using HTTPOnly and Secure flags for cookies.
+Explain input sanitization (e.g., using libraries like OWASP Java HTML Sanitizer), Content Security Policy (CSP), and using HTTPOnly and Secure flags for cookies.
 
 **SQL Injection**
 
-Scenario: An application allows users to search for products by entering a search query. The application directly inserts the user input into an SQL query without proper sanitization, leading to a potential SQL injection vulnerability. An attacker inputs ' OR 1=1 -- into the search box and gains access to sensitive data.
+An application allows users to search for products by entering a search query. The application directly inserts the user input into an SQL query without proper sanitization, leading to a potential SQL injection vulnerability. An attacker inputs ' OR 1=1 -- into the search box and gains access to sensitive data.
 Question: How would you defend against SQL injection attacks?
 
-Answer Focus: Use prepared statements, parameterized queries, and ORM frameworks to prevent direct interaction between user input and SQL queries.
+Use prepared statements, parameterized queries, and ORM frameworks to prevent direct interaction between user input and SQL queries.
 
 **Cross-Site Request Forgery (CSRF)**
 
-Scenario: A user is logged into a banking website. The attacker sends a link via email, tricking the user into clicking on it. The link causes an unintended money transfer from the user’s account to the attacker’s account.
+A user is logged into a banking website. The attacker sends a link via email, tricking the user into clicking on it. The link causes an unintended money transfer from the user’s account to the attacker’s account.
 Question: How can you mitigate CSRF risks in a web application?
 
-Answer Focus: Implement anti-CSRF tokens, ensure that sensitive actions are protected by POST methods, and use SameSite cookie attributes to prevent cookies from being sent with cross-origin requests.
+Implement anti-CSRF tokens, ensure that sensitive actions are protected by POST methods, and use SameSite cookie attributes to prevent cookies from being sent with cross-origin requests.
 
 **Insecure Direct Object References (IDOR)**
 
-Scenario: A user can modify the URL in their browser to access another user’s data (e.g., changing user=123 to user=124 to view another user’s private profile).
-Question: How would you address IDOR vulnerabilities?
+A user can modify the URL in their browser to access another user’s data (e.g., changing user=123 to user=124 to view another user’s private profile).How would you address IDOR vulnerabilities?
 
-Answer Focus: Use proper authorization checks on the server side to ensure users can only access resources they’re permitted to, even if the object references in the URL are manipulated.
+Use proper authorization checks on the server side to ensure users can only access resources they’re permitted to, even if the object references in the URL are manipulated.
 
 **Session Fixation Attack**
 
-Scenario: An attacker forces a victim to use a specific session ID by embedding it in a URL. After the victim logs in with that session ID, the attacker can hijack the session and perform malicious actions on their behalf.
+An attacker forces a victim to use a specific session ID by embedding it in a URL. After the victim logs in with that session ID, the attacker can hijack the session and perform malicious actions on their behalf.
 Question: How would you mitigate session fixation attacks?
 
-Answer Focus: Regenerate session IDs after login and use secure cookie flags (Secure, HttpOnly, SameSite). Enforce strong session management practices.
+Regenerate session IDs after login and use secure cookie flags (Secure, HttpOnly, SameSite). Enforce strong session management practices.
 
 **Broken Authentication and Session Management**
 
-Scenario: The application uses weak passwords and does not properly invalidate sessions when a user logs out. An attacker exploits this by reusing an old session cookie to impersonate the user.
+The application uses weak passwords and does not properly invalidate sessions when a user logs out. An attacker exploits this by reusing an old session cookie to impersonate the user.
 Question: What steps would you take to improve authentication and session management?
 
-Answer Focus: Implement multi-factor authentication (MFA), enforce strong password policies, use proper session expiration, and ensure session tokens are securely stored.
+Implement multi-factor authentication (MFA), enforce strong password policies, use proper session expiration, and ensure session tokens are securely stored.
 
 **Security Misconfiguration**
 
-Scenario: A web application’s production environment is running with default configurations, revealing sensitive error messages and exposing internal files that should not be publicly accessible.
+A web application’s production environment is running with default configurations, revealing sensitive error messages and exposing internal files that should not be publicly accessible.
 Question: How would you address security misconfiguration issues?
 
-Answer Focus: Regularly audit and harden configurations, disable unnecessary services, and avoid default settings. Use error handling that does not expose sensitive information to users.
+Regularly audit and harden configurations, disable unnecessary services, and avoid default settings. Use error handling that does not expose sensitive information to users.
 
 **Sensitive Data Exposure**
 
-Scenario: A web application stores user credit card information in plain text in the database. An attacker gains access to the database and retrieves sensitive user data.
+A web application stores user credit card information in plain text in the database. An attacker gains access to the database and retrieves sensitive user data.
 Question: What actions would you take to prevent sensitive data exposure?
 
-Answer Focus: Implement encryption (both at rest and in transit), tokenize sensitive data, and follow the principles of least privilege for access control.
+Implement encryption (both at rest and in transit), tokenize sensitive data, and follow the principles of least privilege for access control.

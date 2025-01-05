@@ -17,7 +17,7 @@
 5. Logging and Monitoring: Set up logging for all actions, and use intrusion detection systems to detect abnormal activity.
 6. Regular Audits: Perform regular security audits and vulnerability assessments.
 
-## Penetration testing tools
+## Penetration Testing Tools
 
 - Nmap: For network scanning and discovery.
 - Burp Suite: For web application security testing (great for exploiting vulnerabilities like XSS, CSRF, SQL injection).

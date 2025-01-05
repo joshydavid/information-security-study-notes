@@ -49,7 +49,7 @@ Sender: Layer 7 -> Layer 1
 
 - This layer is responsible for communication between devices on the same local network (e.g., your computer and your router).
 - It adds a MAC address (source and destination) for communication within the same physical network.
-- The data is now called a frame.
+- The data is now called a **frame**.
 - Example: Your device’s MAC address is used to communicate with your router’s MAC address.
 
 ### Physical Layer (Layer 1)
