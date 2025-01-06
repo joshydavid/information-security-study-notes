@@ -18,7 +18,8 @@ class Solution:
                     zeroCount -= 1
                 l += 1
 
-            maxOnes = max(maxOnes, r - l + 1)
+            length = r - l + 1
+            maxOnes = max(maxOnes, length)
 
         return maxOnes
 
