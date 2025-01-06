@@ -5,17 +5,17 @@
 The NIST framework divides incident response into four main phases:
 
 1. Preparation
-   • Focuses on readiness (tools, processes, and policies).
-   • Example: Ensuring logging, incident response plans, and team training are in place.
+   - Focuses on readiness (tools, processes, and policies).
+   - Example: Ensuring logging, incident response plans, and team training are in place.
 2. Detection and Analysis
-   • Identifying the incident and assessing its scope and impact.
-   • Example: Using SIEM tools, IDS/IPS, and threat intelligence to detect anomalies.
+   - Identifying the incident and assessing its scope and impact.
+   - Example: Using SIEM tools, IDS/IPS, and threat intelligence to detect anomalies.
 3. Containment, Eradication, and Recovery
-   • Contain the threat, remove it, and restore normal operations.
-   • Example: Isolate the compromised server, patch the vulnerability, and recover from backups.
+   - Contain the threat, remove it, and restore normal operations.
+   - Example: Isolate the compromised server, patch the vulnerability, and recover from backups.
 4. Post-Incident Activity
-   • Learn from the incident and improve future defenses.
-   • Example: Conduct a root cause analysis and update security controls.
+   - Learn from the incident and improve future defenses.
+   - Example: Conduct a root cause analysis and update security controls.
 
 ## [Incident Response] A server has been compromised, and attackers are exfiltrating sensitive data. How would you handle the situation?
 

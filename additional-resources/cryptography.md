@@ -32,18 +32,15 @@
 - **ECB (Electronic Codebook)**: A simple block cipher mode where each block is encrypted independently. Less secure due to pattern repetition in ciphertext.
 - **OFB (Output Feedback)**: A mode that uses previous ciphertext for encryption, turning a block cipher into a stream cipher.
 - **CFB (Cipher Feedback)**: Similar to OFB but uses feedback in a different way, making it more secure than ECB.
-
-  **Which is safer?**
-
-  - **CBC** is safer than **ECB**, as it prevents ciphertext patterns and improves security.
+- **CBC** is safer than **ECB**, as it prevents ciphertext patterns and improves security.
 
 ### AEAD (Authenticated Encryption with Associated Data)
 
-- Provides both confidentiality (encryption) and integrity (authenticity). AEAD algorithms ensure that data hasn't been tampered with during transmission.
+Provides both confidentiality (encryption) and integrity (authenticity). AEAD algorithms ensure that data hasn't been tampered with during transmission.
 
 ### GCM (Galois/Counter Mode)
 
-- A mode of encryption that combines counter mode encryption with Galois authentication, providing both confidentiality and integrity.
+A mode of encryption that combines counter mode encryption with Galois authentication, providing both confidentiality and integrity.
 
 ### Padding and IV (Initialization Vector)
 
@@ -75,7 +72,7 @@
 
 ### MD5 - Why is it not secure?
 
-- **MD5** is vulnerable to collision attacks, where two different inputs produce the same hash. It's considered broken and unsuitable for cryptographic purposes.
+**MD5** is vulnerable to collision attacks, where two different inputs produce the same hash. It's considered broken and unsuitable for cryptographic purposes.
 
 ### When to use hashing vs. encryption
 
@@ -84,11 +81,11 @@
 
 ### Rainbow Tables
 
-- Precomputed tables used for reversing cryptographic hash functions. They make brute-forcing password hashes easier by storing hash values.
+Precomputed tables used for reversing cryptographic hash functions. They make brute-forcing password hashes easier by storing hash values.
 
 ### Salting
 
-- Adding a random value (salt) to input data before hashing to ensure that identical data produces different hashes.
+Adding a random value (salt) to input data before hashing to ensure that identical data produces different hashes.
 
 ## Hashing Attacks
 
@@ -98,13 +95,13 @@
    - **Two-way**: Finding a message that hashes to a specific target value.
 
 2. **Pre-image Attack**
-   - Finding a message that produces a specific hash value.
+   Finding a message that produces a specific hash value.
 
 ## Digital Signature
 
 ### MAC (Message Authentication Code)
 
-- A short piece of data used to verify the integrity and authenticity of a message.
+A short piece of data used to verify the integrity and authenticity of a message.
 
 ### MAC vs HMAC
 
@@ -113,7 +110,7 @@
 
 ### HMAC-SHA
 
-- HMAC using the SHA family of hash functions (SHA-1, SHA-2, etc.).
+HMAC using the SHA family of hash functions (SHA-1, SHA-2, etc.).
 
 ### Signing and Verification
 
@@ -129,7 +126,7 @@
 
 ### What is it?
 
-- **Tokenization**: The process of replacing sensitive data with tokens that have no meaningful value outside of the system.
+**Tokenization**: The process of replacing sensitive data with tokens that have no meaningful value outside of the system.
 
 ### FPE (Format-Preserving Encryption) and SST (Substitution-based Tokenization)
 
@@ -138,19 +135,19 @@
 
 ### Is it different from masking?
 
-- **Masking**: Hides part of data (e.g., showing only the last four digits of a credit card), while tokenization replaces it entirely.
+**Masking**: Hides part of data (e.g., showing only the last four digits of a credit card), while tokenization replaces it entirely.
 
 ## SSH Key-Pair
 
-- A pair of cryptographic keys (public and private) used for authentication in secure shell (SSH) connections.
+A pair of cryptographic keys (public and private) used for authentication in secure shell (SSH) connections.
 
 ## PGP - Keyring
 
-- **PGP (Pretty Good Privacy)**: A cryptographic tool for securing email and files, using a keyring to store public and private keys.
+**PGP (Pretty Good Privacy)**: A cryptographic tool for securing email and files, using a keyring to store public and private keys.
 
 ## PBKDF2 (Password-Based Key Derivation Function 2)
 
-- A key derivation function designed to enhance password security by applying multiple iterations of a cryptographic hash function.
+A key derivation function designed to enhance password security by applying multiple iterations of a cryptographic hash function.
 
 ## PKI (Public Key Infrastructure)
 
@@ -195,7 +192,7 @@ A **digital certificate** is a cryptographic document used to verify the identit
 
 ### Key Exchange and Distribution
 
-- The public key is exchanged between parties, while the private key is kept secure and never shared.
+The public key is exchanged between parties, while the private key is kept secure and never shared.
 
 ### Difference Between Server and Client Certificates
 
